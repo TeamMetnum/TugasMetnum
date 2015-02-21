@@ -102,7 +102,7 @@ class AitkenTest {
 
 /*
 
-catatan: (akhlul)
+catatan: (akhlUl ganteng)
 ttg output prosesnya spertinya perlu disesuaikan karna hasilnya agak aneh, 
 terlalu gk kece kalo diliat sama kitanya (pengguna)
 
