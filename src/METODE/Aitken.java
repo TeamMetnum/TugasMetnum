@@ -7,7 +7,7 @@ import java.util.*;
 Metode Aitken :: 080989999@instan---------------------
 */        
 
-public final class Aitken {
+public class Aitken {
     String aitken_ops; //outputprocess
     double[] nilaiXn;
     double Xn2;
