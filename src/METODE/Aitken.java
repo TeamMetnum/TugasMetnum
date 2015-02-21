@@ -1,4 +1,5 @@
 hfgfhmf
+        sdljsdbknl/v/k.j
 package metode;
 ;kljb,.kxn/lkbj
 import net.objecthunter.exp4j.Expression;
