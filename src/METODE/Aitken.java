@@ -82,7 +82,7 @@ public class Aitken {
 }
 
 // nah ini test nyay > cek sini untuk liat caranya
-class AitkenTest {
+/*class AitkenTest {
     public static void main (String[]args) {
         Scanner input=new Scanner(System.in);
         System.out.print("Masukkan f(x): "); //1. User menginput f(x)
@@ -95,10 +95,10 @@ class AitkenTest {
         double X0 = input.nextDouble();
         
         Aitken hasilAitken = new Aitken(fungsi ,n, X0, toleransi);
-        //System.out.println(hasilAitken.Output());
+        System.out.println(hasilAitken.Output());
         
     }
-}
+}*/
 
 /*
 
