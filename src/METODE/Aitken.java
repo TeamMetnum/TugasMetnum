@@ -1,12 +1,89 @@
-hfgfhmf
-        sdljsdbknl/v/k.j
 package metode;
-;kljb,.kxn/lkbj
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
-public class Aitken {
-    public static void main (String[]args){
+
+/*
+Metode Aitken ::
+*/        
+
+final class Aitken {
+    String aitken_ops; //outputprocess
+    double[] nilaiXn;
+    double Xn2;
+    boolean aitken_status; // aitken apakah bukan,
+    int max_iterasi; // maximum iterasi
+    
+    // Aitken(S
+    public Aitken(String f, int n, double Xn, double tlrn) {
+        StringBuilder aitken_op = new StringBuilder();
+        nilaiXn = new double[n];
+        Xn2 = 0;
+        aitken_status = true;
+        max_iterasi = n;
+        
+        aitken_op.append("Xn\t\tF(Xn)\t\tXn-F(Xn)\n");
+        // Xn       F(Xn)       Xn-F(Xn)
+        
+        for( int i=0; i<n; i++) {
+            nilaiXn[i] = Xn;
+            double selisihMutlak;
+            
+            if ( Xn - MathParsing(f,Xn) >= 0 )
+                selisihMutlak = Xn - MathParsing(f,Xn);
+            else 
+                selisihMutlak = ( Xn - MathParsing(f,Xn) ) * (-1);
+            
+            Xn = MathParsing(f,Xn);
+            
+            aitken_op.append( nilaiXn[i] + "\t\t" + Xn + "\t\t" + selisihMutlak + "\n");
+            // nilaiXn[i]       Xn         selisihmutlak
+            
+            if (selisihMutlak <= tlrn){
+                Xn2 = nilaiXn[i]; 
+                aitken_status = false; 
+                break;
+            }
+        }
+        
+        aitken_ops = aitken_op.toString();
+     }
+    
+    // output akan menghasilkan nilai aitken output
+    double Output() {
+        if (aitken_status){
+            double deltaX0 = nilaiXn[max_iterasi-2] - nilaiXn[max_iterasi-3];
+            double deltaX1 = nilaiXn[max_iterasi-1] - nilaiXn[max_iterasi-2];
+            double delta2X0 = deltaX1 - deltaX0;
+            Xn2 = nilaiXn[max_iterasi-1] - ((deltaX1*deltaX1)/delta2X0);
+            
+            // Dengan menggunakan metode aiken diperoleh solusi berikut
+            return Xn2;
+        }
+        else{
+            // Tanpa menggunakan metode aiken diperoleh solusi berikut
+            return Xn2;
+        }
+    }
+    
+    // output prosesnya disini sebagai string
+    String OutputProcess() {
+        return aitken_ops;
+    }
+    
+    // bawaan sononya
+    double MathParsing(String func, double var) {
+        Expression e = new ExpressionBuilder(func)
+        .variables("x")
+        .build()
+        .setVariable("x", var);
+        return e.evaluate();
+    }
+}
+
+// nah ini test nyay > cek sini untuk liat caranya
+class AitkenTest {
+    public static void main (String[]args) {
         Scanner input=new Scanner(System.in);
         System.out.print("Masukkan f(x): "); //1. User menginput f(x)
         String fungsi=input.nextLine();
@@ -16,50 +93,18 @@ public class Aitken {
         int n=input.nextInt();
         System.out.print("Masukkan nilai X0\t\t:");
         double X0 = input.nextDouble();
-        Aitken(fungsi ,n, X0, toleransi);
-    }
-    
-    public static void Aitken(String f, int n, double Xn, double tlrn)
-    {
-        double[]nilaiXn = new double[n];
-        double Xn2=0;
-        boolean aitken = true;
         
-        System.out.println("Xn\t\tF(Xn)\t\tXn-F(Xn)");
-        for(int i=0; i<n;i++){
-            nilaiXn[i] = Xn;
-            double selisihMutlak;
-            
-            if (Xn-MathParsing(f,Xn)>=0)selisihMutlak =Xn-MathParsing(f,Xn);
-            else selisihMutlak =(Xn-MathParsing(f,Xn))*-1;
-            Xn = MathParsing(f,Xn);
-            
-            System.out.println(nilaiXn[i]+"\t\t"+Xn+"\t\t"+selisihMutlak);
-            if (selisihMutlak<= tlrn){
-                Xn2 = nilaiXn[i]; 
-                aitken = false; break;
-            }
-        }
-        System.out.println();
+        Aitken hasilAitken = new Aitken(fungsi ,n, X0, toleransi);
+        System.out.println(hasilAitken.OutputProcess());
         
-        if (aitken){
-            double deltaX0= nilaiXn[n-2]-nilaiXn[n-3];
-            double deltaX1= nilaiXn[n-1]-nilaiXn[n-2];
-            double delta2X0= deltaX1 - deltaX0;
-            Xn2 = nilaiXn[n-1] - ((deltaX1*deltaX1)/delta2X0);
-            
-            System.out.println("Dengan metode aiken diperoleh solusi ="+Xn2);
-        }
-        else{
-            System.out.println("Tanpa menggunakan metode aiken diperoleh solusi ="+Xn2);
-        }
-    
-    }
-    public static double MathParsing(String func, double var){
-        Expression e = new ExpressionBuilder(func)
-        .variables("x")
-        .build()
-        .setVariable("x", var);
-        return e.evaluate();
     }
 }
+
+/*
+
+catatan: (akhlul)
+ttg output prosesnya spertinya perlu disesuaikan karna hasilnya agak aneh, 
+terlalu gk kece kalo diliat sama kitanya (pengguna)
+
+
+*/
