@@ -4,7 +4,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
 
 /*
-Metode Aitken ::
+Metode Aitken :: 080989999@instan
 */        
 
 public final class Aitken {
