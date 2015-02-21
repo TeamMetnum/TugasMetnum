@@ -95,8 +95,7 @@ class AitkenTest {
         double X0 = input.nextDouble();
         
         Aitken hasilAitken = new Aitken(fungsi ,n, X0, toleransi);
-        System.out.println(hasilAitken.OutputProcess());
-        System.out.println(hasilAitken.Output());
+        //System.out.println(hasilAitken.Output());
         
     }
 }
