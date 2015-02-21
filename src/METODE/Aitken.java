@@ -5,7 +5,7 @@ import java.util.*;
 public class Aitken {
     public static void main (String[]args){
         Scanner input=new Scanner(System.in);
-        System.out.print("Masukkan f(x): "); //1. User menginput f(x)
+        Systdem.out.print("Masukkan f(x): "); //1. User menginput f(x)
         String fungsi=input.nextLine();
         System.out.print("Masukkan batas toleransi\t:");
         double toleransi = input.nextDouble();
