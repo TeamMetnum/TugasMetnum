@@ -48,3 +48,4 @@ public class NewtonRhapson {
 		
 		return e.evaluate();
 	}
+        }
