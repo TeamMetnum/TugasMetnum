@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package METODE;
-
+import javax.swing.table.DefaultTableModel;
+import metode.Aitken;
 /**
  *
  * @author MuhammadAlham
@@ -490,7 +491,12 @@ public class gui extends javax.swing.JFrame {
      int n= Integer.parseInt(inIterasi.getText());
      double Xn= Double.parseDouble(inBatasbawah.getText());
      double tlrn= Double.parseDouble(inError.getText());
-     Aitken.Aitken(fx, n, Xn,tlrn);
+     Aitken a=new Aitken(fx,n,Xn,tlrn);
+     DefaultTableModel model=(DefaultTableModel) tProses.getModel();
+     model.addRow(new Object[]{inFx.getText(),inIterasi.getText(),inBatasbawah.getText(),inError.getText()
+     });
+     String b=String.valueOf(a.Output());
+     hAkhir.setText(b);
     }//GEN-LAST:event_bCariActionPerformed
 
     /**
