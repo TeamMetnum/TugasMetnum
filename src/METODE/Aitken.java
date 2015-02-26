@@ -1,6 +1,7 @@
 package metode;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+import java.util.*;
 
 /*
 Metode Aitken :: 080989999@instan---------------------
@@ -81,7 +82,7 @@ public class Aitken {
 }
 
 // nah ini test nyay > cek sini untuk liat caranya
-/*class AitkenTest {
+class AitkenTest {
     public static void main (String[]args) {
         Scanner input=new Scanner(System.in);
         System.out.print("Masukkan f(x): "); //1. User menginput f(x)
@@ -97,7 +98,7 @@ public class Aitken {
         System.out.println(hasilAitken.Output());
         
     }
-}*/
+}
 
 /*
 
