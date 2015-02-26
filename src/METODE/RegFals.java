@@ -23,8 +23,19 @@ public class RegFals {
         Fa=MathParsing(fungsi,a);
         Fb=MathParsing(fungsi,b);
         for(int i=0;i<n;i++){
+            if (i==0){
+                System.out.println("| i |a\t\t\t|b\t\t|x\t\t|Fa\t\t|Fb\t\t|Fx\t\t|");
+            }
             x=(a*Fb-b*Fa)/(Fb-Fa);
             Fx=MathParsing(fungsi,x);
+            System.out.print("| "+(i+1)+" | ");
+            System.out.print(String.format("%.8f", a)+"\t|");
+            System.out.print(String.format("%.8f", b)+"\t|");
+            System.out.print(String.format("%.8f", x)+"\t|");
+            System.out.print(String.format("%.8f", Fa)+"\t|");
+            System.out.print(String.format("%.8f", Fb)+"\t|");
+            System.out.print(String.format("%.8f", Fx)+"\t|");
+            System.out.println();
             if(Math.abs(Fx)<e) break;
             if(Fx*Fa<0){
                 b=x;
