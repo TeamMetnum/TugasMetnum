@@ -9,10 +9,10 @@ Metode Aitken :: 080989999@instan---------------------
 
 public class Aitken {
     String aitken_ops; //outputprocess
-    double[] nilaiXn;
-    double Xn2;
-    boolean aitken_status; // aitken apakah bukan,
-    int max_iterasi; // maximum iterasi
+    public double[] nilaiXn;
+    public double Xn2;
+    public boolean aitken_status; // aitken apakah bukan,
+    public int max_iterasi; // maximum iterasi
     
     // Aitken(S
     public Aitken(String f, int n, double Xn, double tlrn) {
