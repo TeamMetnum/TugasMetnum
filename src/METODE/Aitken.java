@@ -1,7 +1,6 @@
 package metode;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
-import java.util.*;
 
 /*
 Metode Aitken :: 080989999@instan---------------------
