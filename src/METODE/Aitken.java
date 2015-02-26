@@ -50,7 +50,7 @@ public class Aitken {
      }
     
     // output akan menghasilkan nilai aitken output
-    double Output() {
+    public double Output() {
         if (aitken_status){
             double deltaX0 = nilaiXn[max_iterasi-2] - nilaiXn[max_iterasi-3];
             double deltaX1 = nilaiXn[max_iterasi-1] - nilaiXn[max_iterasi-2];
