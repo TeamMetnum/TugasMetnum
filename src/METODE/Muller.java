@@ -5,8 +5,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
 public class Muller {
     public static void main(String[] args) {
-        double Fx0,Fx1,Fx2,x0,x1,x2,x = 0;
-        
+        double x0,x1,x2;
         Scanner input=new Scanner(System.in);
         System.out.print("Masukkan f(x): "); //1. User menginput f(x)
         String fungsi=input.nextLine();
@@ -18,14 +17,19 @@ public class Muller {
         x0=input.nextDouble();
         System.out.print("Masukkan nilai (x1): "); //5. User menginput b
         x1=input.nextDouble();
-        System.out.print("Masukkan nilai (x2): "); //5. User menginput b
+        System.out.print("Masukkan nilai (x2): "); //6. User menginput c
         x2=input.nextDouble();
         
-        double h0,h1,d0,d1,a,b,c,h;
+        Muller proses = new Muller(fungsi,e,n,x0,x1,x2);
+    }
+    public Muller(String function, double error, int n, double x0, double x1, double x2){
+        double h0,h1,d0,d1,a,b,c,h,Fx0,Fx1,Fx2,x = 0;
+        System.out.println("\nProses: ");
+        System.out.println("n\tx0\tx1\tx2\tf(x2)");
         for(int i=0;i<n;i++){
-            Fx0=MathParsing(fungsi,x0);
-            Fx1=MathParsing(fungsi,x1);
-            Fx2=MathParsing(fungsi,x2);
+            Fx0=MathParsing(function,x0);
+            Fx1=MathParsing(function,x1);
+            Fx2=MathParsing(function,x2);
             
             h0=x1-x0;
             h1=x2-x1;
@@ -41,14 +45,16 @@ public class Muller {
             
             x=x2+h;
             
-            if (Math.abs(MathParsing(fungsi,x))<e) break;
+            System.out.printf(i+"\t%.4f\t%.4f\t%.4f\t%.4f\n",x0,x1,x2,MathParsing(function,x));
+            
+            if (Math.abs(MathParsing(function,x))<error) break;
             else {
                 x0=x1;
                 x1=x2;
                 x2=x;
             }
         }
-        System.out.printf("Solusi x: %.4f \n",x);
+        System.out.printf("\nSolusi x: %.4f \n",x);
     }
     public static double MathParsing(String func, double var){
         Expression e = new ExpressionBuilder(func)
@@ -58,4 +64,3 @@ public class Muller {
         return e.evaluate();
     }
 }
-
