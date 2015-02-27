@@ -46,7 +46,7 @@ public class Muller {
             else h=(-2*c)/(b-D);
             
             xhasil=x2+h;
-            
+            double math=MathParsing(function,xhasil);
             //System.out.printf(i+"\t%.4f\t%.4f\t%.4f\t%.4f\n",x0,x1,x2,MathParsing(function,xhasil));
             
             if (Math.abs(MathParsing(function,xhasil))<error) break;
