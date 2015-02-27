@@ -1288,7 +1288,7 @@ public class gui extends javax.swing.JFrame {
         
      model.addRow(new Object[]
                         {
-                                i+1,x0,x1,x2,math
+                                i,x0,x1,x2,math
                         });
             
      if (Math.abs(MathParsing(fx,xhasil))<tlrn) break;
