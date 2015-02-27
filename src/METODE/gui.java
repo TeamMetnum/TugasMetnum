@@ -101,7 +101,7 @@ public class gui extends javax.swing.JFrame {
         tabMetode.setBackground(new java.awt.Color(0, 0, 0));
         tabMetode.setForeground(new java.awt.Color(25, 71, 138));
         tabMetode.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        tabMetode.setFont(new java.awt.Font("Expansiva", 0, 12)); // NOI18N
+        tabMetode.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         tabMetode.setName("AITKEN"); // NOI18N
         tabMetode.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -317,11 +317,11 @@ public class gui extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(bClear, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                .addComponent(bClear, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(bCari, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                .addComponent(bCari, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(bSimpan, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addComponent(bSimpan, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addGap(87, 87, 87))
         );
         jPanel3Layout.setVerticalGroup(
@@ -369,7 +369,7 @@ public class gui extends javax.swing.JFrame {
         tabBiseksi.setLayout(tabBiseksiLayout);
         tabBiseksiLayout.setHorizontalGroup(
             tabBiseksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         tabBiseksiLayout.setVerticalGroup(
             tabBiseksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,7 +385,7 @@ public class gui extends javax.swing.JFrame {
         tabIterasi.setLayout(tabIterasiLayout);
         tabIterasiLayout.setHorizontalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         tabIterasiLayout.setVerticalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,7 +401,7 @@ public class gui extends javax.swing.JFrame {
         tabMuller.setLayout(tabMullerLayout);
         tabMullerLayout.setHorizontalGroup(
             tabMullerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         tabMullerLayout.setVerticalGroup(
             tabMullerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -417,7 +417,7 @@ public class gui extends javax.swing.JFrame {
         tabNR.setLayout(tabNRLayout);
         tabNRLayout.setHorizontalGroup(
             tabNRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         tabNRLayout.setVerticalGroup(
             tabNRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -589,7 +589,7 @@ public class gui extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(scrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -645,11 +645,11 @@ public class gui extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(btnClearRF, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                .addComponent(btnClearRF, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btnCariRF, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                .addComponent(btnCariRF, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btnSimpanRF, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addComponent(btnSimpanRF, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
                 .addGap(87, 87, 87))
         );
         jPanel5Layout.setVerticalGroup(
@@ -694,7 +694,7 @@ public class gui extends javax.swing.JFrame {
         tabSecant.setLayout(tabSecantLayout);
         tabSecantLayout.setHorizontalGroup(
             tabSecantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         tabSecantLayout.setVerticalGroup(
             tabSecantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -705,7 +705,7 @@ public class gui extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(35, 141, 205));
 
-        jLabel1.setFont(new java.awt.Font("CGF Locust Resistance", 0, 30)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Space Age", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("METODE APROKSIMASI");
@@ -749,7 +749,7 @@ public class gui extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabMetode, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE)
+                .addComponent(tabMetode)
                 .addContainerGap())
             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );

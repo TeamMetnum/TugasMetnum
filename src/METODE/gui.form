@@ -131,7 +131,7 @@
               <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="tabMetode" pref="1038" max="32767" attributes="0"/>
+                  <Component id="tabMetode" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Component id="jPanel4" alignment="1" max="32767" attributes="0"/>
@@ -161,7 +161,7 @@
             </Property>
             <Property name="tabPlacement" type="int" value="2"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Expansiva" size="12" style="0"/>
+              <Font name="Berlin Sans FB" size="14" style="0"/>
             </Property>
             <Property name="name" type="java.lang.String" value="AITKEN" noResource="true"/>
           </Properties>
@@ -539,11 +539,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="bClear" pref="185" max="32767" attributes="0"/>
+                              <Component id="bClear" pref="194" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="bCari" pref="184" max="32767" attributes="0"/>
+                              <Component id="bCari" pref="196" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="bSimpan" pref="187" max="32767" attributes="0"/>
+                              <Component id="bSimpan" pref="196" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -638,7 +638,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="834" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="864" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -671,7 +671,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="834" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="864" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -704,7 +704,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="834" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="864" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -737,7 +737,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="834" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="864" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -996,7 +996,7 @@
                                       <Component id="scrollpane" min="-2" pref="148" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane3" alignment="0" pref="428" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane3" alignment="0" pref="458" max="32767" attributes="0"/>
                                   <Component id="jLabel10" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1149,11 +1149,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                              <Component id="btnClearRF" pref="185" max="32767" attributes="0"/>
+                              <Component id="btnClearRF" pref="194" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnCariRF" pref="184" max="32767" attributes="0"/>
+                              <Component id="btnCariRF" pref="196" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnSimpanRF" pref="187" max="32767" attributes="0"/>
+                              <Component id="btnSimpanRF" pref="196" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1243,7 +1243,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="834" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="864" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -1286,7 +1286,7 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="CGF Locust Resistance" size="30" style="0"/>
+                  <Font name="Space Age" size="30" style="1"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
