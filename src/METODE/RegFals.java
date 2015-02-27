@@ -2,6 +2,7 @@ package metode;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
+
 public class RegFals {
     public static void main(String[] args) {
         double Fa,Fb,Fx,a,b,x = 0;
