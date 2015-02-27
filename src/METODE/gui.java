@@ -524,7 +524,7 @@ public class gui extends javax.swing.JFrame {
 
         output1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "OUTPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
-        tProsesRF.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
+        tProsesRF.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         tProsesRF.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -535,7 +535,7 @@ public class gui extends javax.swing.JFrame {
         ));
         tProsesRF.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tProsesRF.setRequestFocusEnabled(false);
-        tProsesRF.setRowHeight(18);
+        tProsesRF.setRowHeight(20);
         tProsesRF.setRowSelectionAllowed(false);
         tProsesRF.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(tProsesRF);
