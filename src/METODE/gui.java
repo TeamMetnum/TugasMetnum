@@ -506,6 +506,7 @@ public class gui extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Solusi Akhir");
 
+        hAkhirMuller.setEditable(false);
         scrollpane1.setViewportView(hAkhirMuller);
 
         javax.swing.GroupLayout output2Layout = new javax.swing.GroupLayout(output2);
@@ -1241,30 +1242,66 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClearMullerActionPerformed
 
     private void btnCariMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariMullerActionPerformed
-     double x0,x1,x2;
+     double h0,h1,d0,d1,a,b,c,h,Fx0,Fx1,Fx2,x0,x1,x2,xhasil = 0;
      String fx=inFxMuller.getText();
      int n= Integer.parseInt(inIterasiMuller.getText());
      double tlrn= Double.parseDouble(inErrorMuller.getText());
      x0= Double.parseDouble(inX0Muller.getText());
      x1= Double.parseDouble(inX1Muller.getText());
      x2= Double.parseDouble(inX2Muller.getText());
-        DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
-            
-        //untuk clear tabel
-        while(model.getRowCount()>0)
+     DefaultTableModel model=(DefaultTableModel) tProsesMuller.getModel();
+     
+
+//untuk clear tabel
+               
+     while(model.getRowCount()>0)
             {
-                    for(int i=0;i<model.getRowCount();i++)
+                    for(int j=0;j<model.getRowCount();j++)
                     {
-                        model.removeRow(i);
+                        model.removeRow(j);
                     }
             }
-     Muller prosesMuller = new metode.Muller(fx,tlrn,n,x0,x1,x2);
+           
+     //methodMuller
+        for(int i=0;i<n;i++){
+            Fx0=MathParsing(fx,x0);
+            Fx1=MathParsing(fx,x1);
+            Fx2=MathParsing(fx,x2);
+            
+            h0=x1-x0;
+            h1=x2-x1;
+            d0=(Fx1-Fx0)/(x1-x0);
+            d1=(Fx2-Fx1)/(x2-x1);
+            a=(d1-d0)/(h1+h0);
+            b=a*h1+d1;
+            c=Fx2;
+            
+            double D = Math.sqrt(b*b-4*a*c);
+            if (Math.abs(b-D)<Math.abs(b+D)) 
+                h=(-2*c)/(b+D);
+            else h=(-2*c)/(b-D);
+            
+            xhasil=x2+h;
+            double math=MathParsing(fx,xhasil);
+            //System.out.printf(i+"\t%.4f\t%.4f\t%.4f\t%.4f\n",x0,x1,x2,MathParsing(function,xhasil));
+            
+        
      model.addRow(new Object[]
                         {
-                                prosesMuller.i,x0,x1,x2,prosesMuller.math
+                                i+1,x0,x1,x2,math
                         });
-     String outputMuller = String.valueOf(prosesMuller.xhasil);
-     hAkhirMuller.setText(outputMuller);
+            
+     if (Math.abs(MathParsing(fx,xhasil))<tlrn) break;
+            else {
+                x0=x1;
+                x1=x2;
+                x2=xhasil;
+            }
+     
+        }
+     String outputMuller = String.valueOf(xhasil);
+     hAkhirMuller.setText(outputMuller);  
+     
     }//GEN-LAST:event_btnCariMullerActionPerformed
 
     private void btnSimpanMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanMullerActionPerformed
