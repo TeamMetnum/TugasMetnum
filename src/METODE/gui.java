@@ -61,7 +61,6 @@ public class gui extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -259,12 +258,10 @@ public class gui extends javax.swing.JFrame {
 
         bClear.setBackground(new java.awt.Color(204, 204, 204));
         bClear.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        bClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/waste.png"))); // NOI18N
         bClear.setText("CLEAR");
 
         bCari.setBackground(new java.awt.Color(204, 204, 204));
         bCari.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        bCari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/calculator.png"))); // NOI18N
         bCari.setText("CARI");
         bCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,7 +271,6 @@ public class gui extends javax.swing.JFrame {
 
         bSimpan.setBackground(new java.awt.Color(204, 204, 204));
         bSimpan.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        bSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         bSimpan.setText("SIMPAN");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -288,7 +284,7 @@ public class gui extends javax.swing.JFrame {
                 .addComponent(bCari, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(983, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {bCari, bClear, bSimpan});
@@ -329,85 +325,85 @@ public class gui extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tabMetode.addTab("AITKEN", new javax.swing.ImageIcon("D:\\GIT METNUM\\trunk\\src\\image\\icon\\gears.png"), tabAitken, ""); // NOI18N
+        tabMetode.addTab("AITKEN", null, tabAitken, "");
 
         javax.swing.GroupLayout tabBiseksiLayout = new javax.swing.GroupLayout(tabBiseksi);
         tabBiseksi.setLayout(tabBiseksiLayout);
         tabBiseksiLayout.setHorizontalGroup(
             tabBiseksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1801, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         tabBiseksiLayout.setVerticalGroup(
             tabBiseksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 523, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
-        tabMetode.addTab("BISEKSI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabBiseksi); // NOI18N
+        tabMetode.addTab("BISEKSI", tabBiseksi);
 
         javax.swing.GroupLayout tabIterasiLayout = new javax.swing.GroupLayout(tabIterasi);
         tabIterasi.setLayout(tabIterasiLayout);
         tabIterasiLayout.setHorizontalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1801, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         tabIterasiLayout.setVerticalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 523, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
-        tabMetode.addTab("ITERASI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabIterasi); // NOI18N
+        tabMetode.addTab("ITERASI", tabIterasi);
 
         javax.swing.GroupLayout tabMullerLayout = new javax.swing.GroupLayout(tabMuller);
         tabMuller.setLayout(tabMullerLayout);
         tabMullerLayout.setHorizontalGroup(
             tabMullerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1801, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         tabMullerLayout.setVerticalGroup(
             tabMullerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 523, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
-        tabMetode.addTab("MULLER", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabMuller); // NOI18N
+        tabMetode.addTab("MULLER", tabMuller);
 
         javax.swing.GroupLayout tabNRLayout = new javax.swing.GroupLayout(tabNR);
         tabNR.setLayout(tabNRLayout);
         tabNRLayout.setHorizontalGroup(
             tabNRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1801, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         tabNRLayout.setVerticalGroup(
             tabNRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 523, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
-        tabMetode.addTab("NEWTON RAHPSON", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabNR); // NOI18N
+        tabMetode.addTab("NEWTON RAHPSON", tabNR);
 
         javax.swing.GroupLayout tabRFLayout = new javax.swing.GroupLayout(tabRF);
         tabRF.setLayout(tabRFLayout);
         tabRFLayout.setHorizontalGroup(
             tabRFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1801, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         tabRFLayout.setVerticalGroup(
             tabRFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 523, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
-        tabMetode.addTab("REGULAR FALSI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabRF); // NOI18N
+        tabMetode.addTab("REGULAR FALSI", tabRF);
 
         javax.swing.GroupLayout tabSecantLayout = new javax.swing.GroupLayout(tabSecant);
         tabSecant.setLayout(tabSecantLayout);
         tabSecantLayout.setHorizontalGroup(
             tabSecantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1801, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         tabSecantLayout.setVerticalGroup(
             tabSecantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 523, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
 
-        tabMetode.addTab("SECANT", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabSecant); // NOI18N
+        tabMetode.addTab("SECANT", tabSecant);
 
         jPanel2.setBackground(new java.awt.Color(25, 71, 138));
 
@@ -437,24 +433,15 @@ public class gui extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(153, 153, 153));
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 204, 0), null));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/home.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setFocusPainted(false);
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+            .addGap(0, 58, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -575,7 +562,6 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JTextField inFx;
     private javax.swing.JTextField inIterasi;
     private javax.swing.JPanel input;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
