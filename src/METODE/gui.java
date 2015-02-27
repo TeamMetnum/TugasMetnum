@@ -1238,7 +1238,12 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnClearMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearMullerActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
+        while(model.getRowCount()>0){
+                    for(int i=0;i<model.getRowCount();i++){
+                        model.removeRow(i);
+                    }
+                }
     }//GEN-LAST:event_btnClearMullerActionPerformed
 
     private void btnCariMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariMullerActionPerformed
