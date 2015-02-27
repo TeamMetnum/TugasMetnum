@@ -835,42 +835,38 @@ public class gui extends javax.swing.JFrame {
      }
      Fa=MathParsing(fx,a);
      Fb=MathParsing(fx,b);
-     for(int i=0;i<n;i++){
-            x=(a*Fb-b*Fa)/(Fb-Fa);
-            Fx=MathParsing(fx,x);
-            
-            DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
-            if(model.getRowCount()==0){    
-                model.addRow(new Object[]
-                {
-                    i+1,a,b,x,Fa,Fb,Fx
-                });
-            }
-            else{
-                while(model.getRowCount()>0){
-                    for(i=0;i<model.getRowCount();i++){
+        DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
+            while(model.getRowCount()>0)
+            {
+                    for(int i=0;i<model.getRowCount();i++)
+                    {
                         model.removeRow(i);
                     }
-                    i=0;
-                }
-                model.addRow(new Object[]
-                {
-                    i+1,a,b,x,Fa,Fb,Fx
-                });
-                
             }
+                for(int i=0;i<n;i++)
+                {
+                    x=(a*Fb-b*Fa)/(Fb-Fa);
+                    Fx=MathParsing(fx,x);
+                                
+                        model.addRow(new Object[]
+                        {
+                                i+1,a,b,x,Fa,Fb,Fx
+                        });
+            
             if(Math.abs(Fx)<tlrn) break;
-            if(Fx*Fa<0){
+            if(Fx*Fa<0)
+            {
                 b=x;
                 Fb=Fx;
-            } else{
+            } 
+            else
+            {
                 a=x;
                 Fa=Fx;
             }
         }
      String outputRF = String.valueOf(x);
      hAkhirRF.setText(outputRF);
-     
     }//GEN-LAST:event_btnCariRFActionPerformed
 
     private void btnSimpanRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanRFActionPerformed
