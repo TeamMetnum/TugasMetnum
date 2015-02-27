@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package METODE;
+import static METODE.MathParsing.MathParsing;
 import javax.swing.table.DefaultTableModel;
 /**
  *
