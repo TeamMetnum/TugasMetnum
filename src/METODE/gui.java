@@ -497,6 +497,7 @@ public class gui extends javax.swing.JFrame {
         input1.setLayout(input1Layout);
         input1Layout.setHorizontalGroup(
             input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(input1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -513,7 +514,6 @@ public class gui extends javax.swing.JFrame {
                     .addComponent(inBatasbawahRF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inBatasatasRF, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
-            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         input1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {inBatasatasRF, inBatasbawahRF});
@@ -542,8 +542,7 @@ public class gui extends javax.swing.JFrame {
                     .addComponent(inBatasatasRF, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         input1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inBatasatasRF, inBatasbawahRF, inErrorRF, inFxRF, inIterasiRF});
@@ -870,7 +869,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_inBatasbawahRFActionPerformed
 
     private void btnCariRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariRFActionPerformed
-     double Fa,Fb,Fx,x = 0;
+        double Fa,Fb,Fx,x = 0;
      String fx=inFxRF.getText();
      int n= Integer.parseInt(inIterasiRF.getText());
      double a= Double.parseDouble(inBatasbawahRF.getText());
