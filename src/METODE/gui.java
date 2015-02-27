@@ -68,6 +68,7 @@ public class gui extends javax.swing.JFrame {
         inBatasbawahRF = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         inBatasatasRF = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         output1 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tProsesRF = new javax.swing.JTable();
@@ -91,13 +92,16 @@ public class gui extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("METODE APROKSIMASI");
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(2000, 440));
 
         tabMetode.setBackground(new java.awt.Color(0, 0, 0));
         tabMetode.setForeground(new java.awt.Color(25, 71, 138));
         tabMetode.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        tabMetode.setFont(new java.awt.Font("Corbel", 0, 15)); // NOI18N
+        tabMetode.setFont(new java.awt.Font("Expansiva", 0, 12)); // NOI18N
         tabMetode.setName("AITKEN"); // NOI18N
         tabMetode.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -105,8 +109,9 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
-        tabAitken.setBackground(new java.awt.Color(204, 204, 204));
+        tabAitken.setBackground(new java.awt.Color(153, 153, 153));
         tabAitken.setAutoscrolls(true);
+        tabAitken.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
         input.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
@@ -312,11 +317,11 @@ public class gui extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(bClear, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(bClear, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(bCari, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addComponent(bCari, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(bSimpan, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(bSimpan, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                 .addGap(87, 87, 87))
         );
         jPanel3Layout.setVerticalGroup(
@@ -357,57 +362,72 @@ public class gui extends javax.swing.JFrame {
 
         tabMetode.addTab("AITKEN", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabAitken, ""); // NOI18N
 
+        tabBiseksi.setBackground(new java.awt.Color(153, 153, 153));
+        tabBiseksi.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
+
         javax.swing.GroupLayout tabBiseksiLayout = new javax.swing.GroupLayout(tabBiseksi);
         tabBiseksi.setLayout(tabBiseksiLayout);
         tabBiseksiLayout.setHorizontalGroup(
             tabBiseksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 859, Short.MAX_VALUE)
+            .addGap(0, 834, Short.MAX_VALUE)
         );
         tabBiseksiLayout.setVerticalGroup(
             tabBiseksiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tabMetode.addTab("BISEKSI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabBiseksi); // NOI18N
+
+        tabIterasi.setBackground(new java.awt.Color(153, 153, 153));
+        tabIterasi.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
         javax.swing.GroupLayout tabIterasiLayout = new javax.swing.GroupLayout(tabIterasi);
         tabIterasi.setLayout(tabIterasiLayout);
         tabIterasiLayout.setHorizontalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 859, Short.MAX_VALUE)
+            .addGap(0, 834, Short.MAX_VALUE)
         );
         tabIterasiLayout.setVerticalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tabMetode.addTab("ITERASI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabIterasi); // NOI18N
+
+        tabMuller.setBackground(new java.awt.Color(153, 153, 153));
+        tabMuller.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
         javax.swing.GroupLayout tabMullerLayout = new javax.swing.GroupLayout(tabMuller);
         tabMuller.setLayout(tabMullerLayout);
         tabMullerLayout.setHorizontalGroup(
             tabMullerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 859, Short.MAX_VALUE)
+            .addGap(0, 834, Short.MAX_VALUE)
         );
         tabMullerLayout.setVerticalGroup(
             tabMullerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tabMetode.addTab("MULLER", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabMuller); // NOI18N
+
+        tabNR.setBackground(new java.awt.Color(153, 153, 153));
+        tabNR.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
         javax.swing.GroupLayout tabNRLayout = new javax.swing.GroupLayout(tabNR);
         tabNR.setLayout(tabNRLayout);
         tabNRLayout.setHorizontalGroup(
             tabNRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 859, Short.MAX_VALUE)
+            .addGap(0, 834, Short.MAX_VALUE)
         );
         tabNRLayout.setVerticalGroup(
             tabNRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tabMetode.addTab("NEWTON RAHPSON", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabNR); // NOI18N
+
+        tabRF.setBackground(new java.awt.Color(153, 153, 153));
+        tabRF.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
         input1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
@@ -493,6 +513,7 @@ public class gui extends javax.swing.JFrame {
                     .addComponent(inBatasbawahRF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inBatasatasRF, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         input1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {inBatasatasRF, inBatasbawahRF});
@@ -520,7 +541,9 @@ public class gui extends javax.swing.JFrame {
                 .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(inBatasatasRF, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         input1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inBatasatasRF, inBatasbawahRF, inErrorRF, inFxRF, inIterasiRF});
@@ -566,7 +589,7 @@ public class gui extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(scrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -583,7 +606,7 @@ public class gui extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
         );
 
-        jPanel5.setBackground(new java.awt.Color(25, 71, 138));
+        jPanel5.setBackground(new java.awt.Color(35, 141, 205));
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, new java.awt.Color(0, 102, 255)));
 
         btnClearRF.setBackground(new java.awt.Color(204, 204, 204));
@@ -622,21 +645,21 @@ public class gui extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(btnClearRF, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(btnClearRF, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btnCariRF, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addComponent(btnCariRF, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btnSimpanRF, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(btnSimpanRF, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                 .addGap(87, 87, 87))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnClearRF)
-                    .addComponent(btnCariRF)
-                    .addComponent(btnSimpanRF))
+                    .addComponent(btnClearRF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCariRF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSimpanRF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -657,12 +680,12 @@ public class gui extends javax.swing.JFrame {
         tabRFLayout.setVerticalGroup(
             tabRFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabRFLayout.createSequentialGroup()
-                .addGroup(tabRFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(input1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(output1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tabRFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(output1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(input1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
 
         tabMetode.addTab("REGULAR FALSI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabRF); // NOI18N
@@ -671,21 +694,21 @@ public class gui extends javax.swing.JFrame {
         tabSecant.setLayout(tabSecantLayout);
         tabSecantLayout.setHorizontalGroup(
             tabSecantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 859, Short.MAX_VALUE)
+            .addGap(0, 834, Short.MAX_VALUE)
         );
         tabSecantLayout.setVerticalGroup(
             tabSecantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGap(0, 516, Short.MAX_VALUE)
         );
 
         tabMetode.addTab("SECANT", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabSecant); // NOI18N
 
-        jPanel2.setBackground(new java.awt.Color(25, 71, 138));
+        jPanel2.setBackground(new java.awt.Color(35, 141, 205));
 
         jLabel1.setFont(new java.awt.Font("CGF Locust Resistance", 0, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("METODE");
+        jLabel1.setText("METODE APROKSIMASI");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -700,13 +723,13 @@ public class gui extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jPanel4.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 204, 0), null));
+        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(25, 71, 138), null));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -726,9 +749,9 @@ public class gui extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabMetode)
+                .addComponent(tabMetode, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -737,14 +760,14 @@ public class gui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabMetode, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addComponent(tabMetode, javax.swing.GroupLayout.PREFERRED_SIZE, 521, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         tabMetode.getAccessibleContext().setAccessibleName("AITKEN");
 
         jMenuBar1.setBackground(new java.awt.Color(25, 71, 138));
-        jMenuBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)));
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(25, 71, 138)));
         jMenuBar1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
         jMenu1.setText("Program");
@@ -786,9 +809,7 @@ public class gui extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 13, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
         );
 
         pack();
@@ -976,6 +997,7 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
