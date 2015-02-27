@@ -329,7 +329,7 @@ public class gui extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tabMetode.addTab("AITKEN", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabAitken, ""); // NOI18N
+        tabMetode.addTab("AITKEN", new javax.swing.ImageIcon("D:\\GIT METNUM\\trunk\\src\\image\\icon\\gears.png"), tabAitken, ""); // NOI18N
 
         javax.swing.GroupLayout tabBiseksiLayout = new javax.swing.GroupLayout(tabBiseksi);
         tabBiseksi.setLayout(tabBiseksiLayout);
