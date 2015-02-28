@@ -61,7 +61,7 @@ public class Muller {
         return muller_op;
     }
     
-    public String hasil_muller() {
+    public double hasil_muller() {
         return xhasil;
     }
     
