@@ -10,13 +10,14 @@ Metode Biseksi :: 60%
 
 public class Biseksi {
     String biseksi_ops; //outputprosess biseksi
-    double Fa, //fx batas atas
+    public double Fa, //fx batas atas
             Fb, //fx batas bawah
             Fx, //fx saat x
             a, //x batas bwh
             b, //x batas ats
             hx, //hasil akhir biseksi
-            e; //maksimumm toleransi error
+            e, //maksimumm toleransi error
+            x = 0;
     int n; // maksimum iterasi
     String fungsi; //fungsi fx
     boolean atengahb; //apakah a =< solusi =< b
@@ -25,7 +26,6 @@ public class Biseksi {
             double a_input, double b_input ) {
         StringBuilder biseksi_op = new StringBuilder();
         
-        double x = 0;
         String fungsi = fungsi_input;
         double e = error_input;
         n = maks_input;
@@ -34,14 +34,14 @@ public class Biseksi {
         b = b_input;
         
         Fa = MathParsing(fungsi,a);
-        System.out.println("fa = "+ Fa);
+        //System.out.println("fa = "+ Fa);
         Fb = MathParsing(fungsi,b);
         
         for (int i=0; i<n; i++) {
-            if(i == 0) {
-                biseksi_op.append("i\t\ta\t\t|b\t\t|x\t\t|Fa\t\t|Fb\t\t|Fx\n");
+            //if(i == 0) {
+                //biseksi_op.append("i\t\ta\t\t|b\t\t|x\t\t|Fa\t\t|Fb\t\t|Fx\n");
                 // i    a   b   x   F(a)    F(b)    F(x)
-            }
+            //}
             
             x = (b+a)/2;
             Fx = MathParsing(fungsi,x);
