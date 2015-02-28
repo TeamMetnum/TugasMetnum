@@ -1744,14 +1744,7 @@ public class gui extends javax.swing.JFrame {
             }
      
         metode.Biseksi bis = new Biseksi(fx, tlrn, n, a, b);
-        
-        for (int i=0; i<n; i++) {
-            model.addRow(new Object[]
-                        {
-                                i, a, b,bis.x, bis.Fa, bis.Fb, bis.Fx
-                        });}
-                hAkhirBiseksi.setText(bis.hasil_biseksi()); 
-       
+        hAkhirBiseksi.setText(bis.hasil_biseksi());
     }//GEN-LAST:event_btnCariBiseksiActionPerformed
 
     private void btnSimpanBiseksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanBiseksiActionPerformed
