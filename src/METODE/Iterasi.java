@@ -144,3 +144,20 @@ class IterasiTest {
         iter.hapusdata();
     }
 }
+
+
+/*
+
+catatan: (akhlUl ganteng)
+> ttg output prosesnya spertinya perlu disesuaikan karna hasilnya agak aneh, 
+terlalu gk kece kalo diliat sama kitanya (pengguna)
+> penulisannya harus bener pas nulis f(x) nya. kalo nulis f(x) nya x^2-2 akan 
+berbeda kalo nulisnya (x^2)-2
+> tolong diperhatikan ya type nya (hehehe),
+> masih ada bugna !!!!!, tolong diingetin lagi ya
+> list method yang gw kira bakal dipake di gui nya :
+        (constructornya)
+        .hasil_iterasi()
+        .proses_iterasi()
+        .hapusdata()
+*/

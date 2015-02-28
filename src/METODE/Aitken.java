@@ -49,8 +49,7 @@ public class Aitken {
         aitken_ops = aitken_op.toString();
      }
     
-    // output akan menghasilkan nilai aitken output
-    public double Output() {
+    public double hasil_aitken() {
         if (aitken_status){
             double deltaX0 = nilaiXn[max_iterasi-2] - nilaiXn[max_iterasi-3];
             double deltaX1 = nilaiXn[max_iterasi-1] - nilaiXn[max_iterasi-2];
@@ -67,8 +66,15 @@ public class Aitken {
     }
     
     // output prosesnya disini sebagai string
-    String OutputProcess() {
+    String proses_aitken() {
         return aitken_ops;
+    }
+    
+    void hapusdata() {
+        aitken_ops = "";
+        Xn2 = 0;
+        aitken_status = false;
+        max_iterasi = 0;
     }
     
     // bawaan sononya
@@ -94,8 +100,8 @@ class AitkenTest {
         System.out.print("Masukkan nilai X0\t\t:");
         double X0 = input.nextDouble();
         
-        Aitken hasilAitken = new Aitken(fungsi ,n, X0, toleransi);
-        System.out.println(hasilAitken.Output());
+        Aitken ai = new Aitken(fungsi ,n, X0, toleransi);
+        System.out.println(ai.proses_aitken());
         
     }
 }
@@ -103,10 +109,14 @@ class AitkenTest {
 /*
 
 catatan: (akhlUl ganteng)
-ttg output prosesnya spertinya perlu disesuaikan karna hasilnya agak aneh, 
+> ttg output prosesnya spertinya perlu disesuaikan karna hasilnya agak aneh, 
 terlalu gk kece kalo diliat sama kitanya (pengguna)
-penulisannya harus bener pas nulis f(x) nya. kalo nulis f(x) nya x^2-2 akan 
+> penulisannya harus bener pas nulis f(x) nya. kalo nulis f(x) nya x^2-2 akan 
 berbeda kalo nulisnya (x^2)-2
-
+> ada yang gw ubah namanya, yang pasti itu metodenya ada :
+        (constructornya)
+        .hasil_aitken()
+        .proses_aitken()
+        .hapusdata()
 
 */
