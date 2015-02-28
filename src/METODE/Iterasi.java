@@ -40,22 +40,22 @@ public class Iterasi {
             int pilih = pilih_input;
             switch (pilih){
                 case 1 : 
-                    iterasi_op.append("no\t\tx\t\tfinv(x)\n");
+                    //iterasi_op.append("no\t\tx\t\tfinv(x)\n");
                     // no(k)    x   finv(x)
                     EP = cari_iterasi (finv,a,maks,0,e);
-                    hasil_sementara += "nilai akar x anda adalah dengan batas yang dipakai " + a + " : " + EP;
+                    //hasil_sementara += "nilai akar x anda adalah dengan batas yang dipakai " + a + " : " + EP;
                     break;
                 case 2 :
-                    iterasi_op.append("no\t\tx\t\tfinv(x)\n");
+                    //iterasi_op.append("no\t\tx\t\tfinv(x)\n");
                     // no(k)    x   finv(x)
                     EP = cari_iterasi (finv,b,maks,0,e);
-                    hasil_sementara += "nilai akar x anda adalah dengan batas yang dipakai " + b + " : " + EP;
+                    //hasil_sementara += "nilai akar x anda adalah dengan batas yang dipakai " + b + " : " + EP;
                     break;
             }
         } else {
-            hasil_sementara += "maaf batas anda tidak dapat digunakan sebagai dasar iterasi\n";
-            if (tes2(fa,fb) == true)
-                hasil_sementara += " karena salah satu di antara angka anda tersebut adalah akar persamaan";
+            //hasil_sementara += "maaf batas anda tidak dapat digunakan sebagai dasar iterasi\n";
+            //if (tes2(fa,fb) == true)
+                //hasil_sementara += " karena salah satu di antara angka anda tersebut adalah akar persamaan";
         }
         return hasil_sementara;
     }
@@ -70,7 +70,7 @@ public class Iterasi {
     }
     
     // dipakai di gui
-    public void hapusdata() {
+    /*public void hapusdata() {
         iterasi_op.setLength(0); // set length of buffer to 0
         iterasi_op.trimToSize(); // trim the underlying buffer
         fx = "";    finv = ""; 
@@ -78,7 +78,7 @@ public class Iterasi {
         a = 0;      b = 0;
         EP = 0;     e = 0;
         maks = 0;
-    }
+    }*/
     
     public double cari_iterasi(String inv, double batas, int ulang, int k, double galat) {
         k++;
@@ -113,7 +113,7 @@ public class Iterasi {
 }
 
 class IterasiTest {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         double fa,fb,a,b,EP,e=0;
         int maks;
@@ -141,8 +141,8 @@ class IterasiTest {
         System.out.println(iter.hasil_iterasi(2));
         System.out.println(iter.proses_iterasi());
         
-        iter.hapusdata();
-    }
+        //iter.hapusdata();
+    }*/
 }
 
 
