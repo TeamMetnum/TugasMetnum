@@ -1893,7 +1893,7 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollpane1;
     private javax.swing.JScrollPane scrollpane2;
     private javax.swing.JScrollPane scrollpane3;
-    private javax.swing.JTable tProsesBiseksi;
+    public static javax.swing.JTable tProsesBiseksi;
     private javax.swing.JTable tProsesIterasi;
     private javax.swing.JTable tProsesMuller;
     private javax.swing.JTable tProsesRF;

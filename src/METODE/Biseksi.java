@@ -3,6 +3,7 @@ package metode;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
+import javax.swing.table.DefaultTableModel;
 
 /*
 Metode Biseksi :: 60%
@@ -24,12 +25,11 @@ public class Biseksi {
     
     public Biseksi(String fungsi_input, double error_input, int maks_input, 
             double a_input, double b_input ) {
-        StringBuilder biseksi_op = new StringBuilder();
+        //StringBuilder biseksi_op = new StringBuilder();
         
         String fungsi = fungsi_input;
         double e = error_input;
         n = maks_input;
-        
         a = a_input;
         b = b_input;
         
@@ -45,10 +45,13 @@ public class Biseksi {
             
             x = (b+a)/2;
             Fx = MathParsing(fungsi,x);
-            biseksi_op.append(
-                    String.format( i + "\t%.4f\t\t%.4f\t\t%.4f\t\t%.4f\t\t%.4f\t\t%.4f\n", 
-                    a, b, x, Fa, Fb, Fx));
-            
+            DefaultTableModel model;
+            model = (DefaultTableModel) METODE.gui.tProsesBiseksi.getModel();
+                 model.addRow(new Object[]
+                        {
+                                i, a, b,x, Fa, Fb, Fx
+                        });
+                 
             if( Math.abs(Fx) < e ) 
                 break;
             
@@ -60,10 +63,14 @@ public class Biseksi {
                 Fa = Fx;
             }
         
+                 
+            
         }
-        biseksi_ops = biseksi_op.toString();
+        //biseksi_ops = biseksi_op.toString();
         // solusi nya adalah x yang dihasilkan
         hx = x;
+       
+                
     }
     
     public String hasil_biseksi() {
@@ -87,7 +94,7 @@ public class Biseksi {
             return true; 
         else return false;
     }
-    public static double MathParsing(String func, double var){
+    public  double MathParsing(String func, double var){
         Expression a  =  new ExpressionBuilder(func)
         .variables("x","pi", "e")
         .build()
@@ -98,7 +105,7 @@ public class Biseksi {
     }
 }
 
-class BiseksiTest {
+/*class BiseksiTest {
     public static void main(String[] args) {
         double Fa, Fb, Fx, a, b, x = 0;
         Scanner input = new Scanner(System.in);
@@ -122,7 +129,7 @@ class BiseksiTest {
         System.out.println("hasil biseksi adalah " + bi.hasil_biseksi());
         System.out.println(bi.proses_biseksi());
     }
-}
+}*/
 
 /*
 catatan: (karom)
