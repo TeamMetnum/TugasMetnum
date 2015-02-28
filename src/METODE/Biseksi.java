@@ -45,12 +45,15 @@ public class Biseksi {
             
             x = (b+a)/2;
             Fx = MathParsing(fungsi,x);
+            
+            //ini untuk masukin ke tabel di gui
             DefaultTableModel model;
             model = (DefaultTableModel) METODE.gui.tProsesBiseksi.getModel();
                  model.addRow(new Object[]
                         {
                                 i, a, b,x, Fa, Fb, Fx
                         });
+                 
                  
             if( Math.abs(Fx) < e ) 
                 break;
