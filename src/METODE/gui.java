@@ -5,6 +5,9 @@
  */
 package METODE;
 import static METODE.MathParsing.MathParsing;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -31,29 +34,33 @@ public class gui extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         tabMetode = new javax.swing.JTabbedPane();
         tabAitken = new javax.swing.JPanel();
-        input = new javax.swing.JPanel();
-        label1 = new javax.swing.JLabel();
-        inFx = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        inIterasi = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        inError = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        inBatasbawah = new javax.swing.JTextField();
-        output = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tProses = new javax.swing.JTable();
-        jScrollBar1 = new javax.swing.JScrollBar();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        hAkhir = new javax.swing.JTextPane();
-        jPanel3 = new javax.swing.JPanel();
-        bClear = new javax.swing.JButton();
-        bCari = new javax.swing.JButton();
-        bSimpan = new javax.swing.JButton();
         tabBiseksi = new javax.swing.JPanel();
         tabIterasi = new javax.swing.JPanel();
+        inputIterasi = new javax.swing.JPanel();
+        label4 = new javax.swing.JLabel();
+        inFxIterasi = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        inGxIterasi = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        inIterasiIterasi = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        inErrorIterasi = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        inBatasatasIterasi = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        inBatasbawahIterasi = new javax.swing.JTextField();
+        outputIterasi = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tProsesIterasi = new javax.swing.JTable();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        scrollpane2 = new javax.swing.JScrollPane();
+        hAkhirIterasi = new javax.swing.JTextPane();
+        jPanel7 = new javax.swing.JPanel();
+        btnClearIterasi = new javax.swing.JButton();
+        btnCariIterasi = new javax.swing.JButton();
+        btnSimpanIterasi = new javax.swing.JButton();
         tabMuller = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         btnClearMuller = new javax.swing.JButton();
@@ -138,251 +145,15 @@ public class gui extends javax.swing.JFrame {
         tabAitken.setAutoscrolls(true);
         tabAitken.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
-        input.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
-
-        label1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        label1.setForeground(new java.awt.Color(25, 71, 138));
-        label1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        label1.setText("F(x)");
-        label1.setAlignmentX(0.5F);
-        label1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        inFx.setToolTipText("Masukan Fungsi (contoh : x^2)");
-        inFx.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inFxActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(25, 71, 138));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("Maksimal Iterasi");
-
-        inIterasi.setToolTipText("");
-        inIterasi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inIterasiActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(25, 71, 138));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("Error");
-
-        inError.setToolTipText("Error yang dapat ditoleransi");
-        inError.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inErrorActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(25, 71, 138));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Batas Bawah");
-
-        inBatasbawah.setToolTipText("");
-        inBatasbawah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inBatasbawahActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout inputLayout = new javax.swing.GroupLayout(input);
-        input.setLayout(inputLayout);
-        inputLayout.setHorizontalGroup(
-            inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(inputLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                    .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inFx)
-                    .addComponent(inIterasi)
-                    .addComponent(inError, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inBatasbawah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        inputLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {inBatasbawah, inError});
-
-        inputLayout.setVerticalGroup(
-            inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(inputLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(inFx, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(inIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(inError))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(inputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(inBatasbawah, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(251, Short.MAX_VALUE))
-        );
-
-        inputLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inBatasbawah, inError, inFx, inIterasi, jLabel2, jLabel3, label1});
-
-        output.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "OUTPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
-
-        tProses.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
-        tProses.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No", "Title 2", "Title 3", "Title 4"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tProses.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        tProses.setRequestFocusEnabled(false);
-        tProses.setRowHeight(18);
-        tProses.setRowSelectionAllowed(false);
-        tProses.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(tProses);
-
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(25, 71, 138));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("PROSES ITERASI");
-
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Hasil Akhir =");
-
-        jScrollPane2.setViewportView(hAkhir);
-
-        javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
-        output.setLayout(outputLayout);
-        outputLayout.setHorizontalGroup(
-            outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(outputLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(outputLayout.createSequentialGroup()
-                        .addGroup(outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addGroup(outputLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        outputLayout.setVerticalGroup(
-            outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(outputLayout.createSequentialGroup()
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(15, 15, 15)
-                .addGroup(outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16))
-        );
-
-        jPanel3.setBackground(new java.awt.Color(25, 71, 138));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, new java.awt.Color(0, 102, 255)));
-
-        bClear.setBackground(new java.awt.Color(204, 204, 204));
-        bClear.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        bClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/waste.png"))); // NOI18N
-        bClear.setText("CLEAR");
-
-        bCari.setBackground(new java.awt.Color(204, 204, 204));
-        bCari.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        bCari.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/calculator.png"))); // NOI18N
-        bCari.setText("CARI");
-        bCari.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bCariActionPerformed(evt);
-            }
-        });
-
-        bSimpan.setBackground(new java.awt.Color(204, 204, 204));
-        bSimpan.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        bSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
-        bSimpan.setText("SIMPAN");
-        bSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSimpanActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(bClear, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(bCari, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(bSimpan, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                .addGap(87, 87, 87))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bClear)
-                    .addComponent(bCari)
-                    .addComponent(bSimpan))
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout tabAitkenLayout = new javax.swing.GroupLayout(tabAitken);
         tabAitken.setLayout(tabAitkenLayout);
         tabAitkenLayout.setHorizontalGroup(
             tabAitkenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabAitkenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(tabAitkenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(tabAitkenLayout.createSequentialGroup()
-                        .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         tabAitkenLayout.setVerticalGroup(
             tabAitkenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tabAitkenLayout.createSequentialGroup()
-                .addGroup(tabAitkenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(input, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 495, Short.MAX_VALUE)
         );
 
         tabMetode.addTab("AITKEN", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabAitken, ""); // NOI18N
@@ -406,15 +177,285 @@ public class gui extends javax.swing.JFrame {
         tabIterasi.setBackground(new java.awt.Color(153, 153, 153));
         tabIterasi.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
+        inputIterasi.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        label4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        label4.setForeground(new java.awt.Color(25, 71, 138));
+        label4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        label4.setText("f(x)");
+        label4.setAlignmentX(0.5F);
+        label4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        inFxIterasi.setToolTipText("Masukan Fungsi (contoh : x^2)");
+        inFxIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inFxIterasiActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(25, 71, 138));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel22.setText("g(x)");
+
+        inGxIterasi.setToolTipText("");
+        inGxIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inGxIterasiActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(25, 71, 138));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel23.setText("Maksimal Iterasi");
+
+        inIterasiIterasi.setToolTipText("Error yang dapat ditoleransi");
+        inIterasiIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inIterasiIterasiActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(25, 71, 138));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel24.setText("Error");
+
+        inErrorIterasi.setToolTipText("");
+        inErrorIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inErrorIterasiActionPerformed(evt);
+            }
+        });
+
+        jLabel25.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(25, 71, 138));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel25.setText("Batas Atas (a)");
+
+        inBatasatasIterasi.setToolTipText("");
+        inBatasatasIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inBatasatasIterasiActionPerformed(evt);
+            }
+        });
+
+        jLabel29.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(25, 71, 138));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel29.setText("Batas Bawah (b)");
+
+        inBatasbawahIterasi.setToolTipText("");
+        inBatasbawahIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inBatasbawahIterasiActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout inputIterasiLayout = new javax.swing.GroupLayout(inputIterasi);
+        inputIterasi.setLayout(inputIterasiLayout);
+        inputIterasiLayout.setHorizontalGroup(
+            inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(inputIterasiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                        .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(inFxIterasi)
+                    .addComponent(inGxIterasi)
+                    .addGroup(inputIterasiLayout.createSequentialGroup()
+                        .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(inBatasatasIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inErrorIterasi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inIterasiIterasi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(inBatasbawahIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        inputIterasiLayout.setVerticalGroup(
+            inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inputIterasiLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inFxIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(inGxIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(inputIterasiLayout.createSequentialGroup()
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(inputIterasiLayout.createSequentialGroup()
+                        .addComponent(inIterasiIterasi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(inErrorIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(inBatasatasIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(inBatasbawahIterasi)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        inputIterasiLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inBatasatasIterasi, inBatasbawahIterasi, inErrorIterasi, inFxIterasi, inGxIterasi, inIterasiIterasi});
+
+        outputIterasi.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "OUTPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        tProsesIterasi.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        tProsesIterasi.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "n", "xn", "x(n+1)"
+            }
+        ));
+        tProsesIterasi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tProsesIterasi.setRequestFocusEnabled(false);
+        tProsesIterasi.setRowHeight(20);
+        tProsesIterasi.setRowSelectionAllowed(false);
+        tProsesIterasi.getTableHeader().setReorderingAllowed(false);
+        jScrollPane5.setViewportView(tProsesIterasi);
+
+        jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(25, 71, 138));
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("PROSES ITERASI");
+
+        jLabel28.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("Solusi Akhir");
+
+        hAkhirIterasi.setEditable(false);
+        scrollpane2.setViewportView(hAkhirIterasi);
+
+        javax.swing.GroupLayout outputIterasiLayout = new javax.swing.GroupLayout(outputIterasi);
+        outputIterasi.setLayout(outputIterasiLayout);
+        outputIterasiLayout.setHorizontalGroup(
+            outputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(outputIterasiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(outputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(outputIterasiLayout.createSequentialGroup()
+                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(scrollpane2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        outputIterasiLayout.setVerticalGroup(
+            outputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(outputIterasiLayout.createSequentialGroup()
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
+                .addGap(15, 15, 15)
+                .addGroup(outputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel28)
+                    .addComponent(scrollpane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
+        );
+
+        jPanel7.setBackground(new java.awt.Color(35, 141, 205));
+        jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.black, new java.awt.Color(0, 102, 255)));
+
+        btnClearIterasi.setBackground(new java.awt.Color(204, 204, 204));
+        btnClearIterasi.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        btnClearIterasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/waste.png"))); // NOI18N
+        btnClearIterasi.setText("CLEAR");
+        btnClearIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearIterasiActionPerformed(evt);
+            }
+        });
+
+        btnCariIterasi.setBackground(new java.awt.Color(204, 204, 204));
+        btnCariIterasi.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        btnCariIterasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/calculator.png"))); // NOI18N
+        btnCariIterasi.setText("CARI");
+        btnCariIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCariIterasiActionPerformed(evt);
+            }
+        });
+
+        btnSimpanIterasi.setBackground(new java.awt.Color(204, 204, 204));
+        btnSimpanIterasi.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        btnSimpanIterasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
+        btnSimpanIterasi.setText("SIMPAN");
+        btnSimpanIterasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimpanIterasiActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(btnClearIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCariIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnSimpanIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                .addGap(87, 87, 87))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnClearIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCariIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSimpanIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout tabIterasiLayout = new javax.swing.GroupLayout(tabIterasi);
         tabIterasi.setLayout(tabIterasiLayout);
         tabIterasiLayout.setHorizontalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 864, Short.MAX_VALUE)
+            .addGroup(tabIterasiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(tabIterasiLayout.createSequentialGroup()
+                        .addComponent(inputIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(outputIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         tabIterasiLayout.setVerticalGroup(
             tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGroup(tabIterasiLayout.createSequentialGroup()
+                .addGroup(tabIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(outputIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(inputIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 404, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         tabMetode.addTab("ITERASI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabIterasi); // NOI18N
@@ -862,6 +903,8 @@ public class gui extends javax.swing.JFrame {
         tProsesRF.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(tProsesRF);
         if (tProsesRF.getColumnModel().getColumnCount() > 0) {
+            tProsesRF.getColumnModel().getColumn(3).setHeaderValue("x");
+            tProsesRF.getColumnModel().getColumn(4).setHeaderValue("Fa");
             tProsesRF.getColumnModel().getColumn(5).setHeaderValue("Fb");
             tProsesRF.getColumnModel().getColumn(6).setHeaderValue("Fx");
         }
@@ -875,6 +918,7 @@ public class gui extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Solusi Akhir");
 
+        hAkhirRF.setEditable(false);
         scrollpane.setViewportView(hAkhirRF);
 
         javax.swing.GroupLayout output1Layout = new javax.swing.GroupLayout(output1);
@@ -1058,7 +1102,7 @@ public class gui extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabMetode, javax.swing.GroupLayout.PREFERRED_SIZE, 500, Short.MAX_VALUE))
+                .addComponent(tabMetode, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
 
         tabMetode.getAccessibleContext().setAccessibleName("AITKEN");
@@ -1118,40 +1162,6 @@ public class gui extends javax.swing.JFrame {
     private void tabMetodeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabMetodeMouseClicked
 
     }//GEN-LAST:event_tabMetodeMouseClicked
-
-    private void inFxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inFxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inFxActionPerformed
-
-    private void inIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inIterasiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inIterasiActionPerformed
-
-    private void inErrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inErrorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inErrorActionPerformed
-
-    private void inBatasbawahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasbawahActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inBatasbawahActionPerformed
-
-    private void bCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCariActionPerformed
-
-     String fx=inFx.getText();
-     int n= Integer.parseInt(inIterasi.getText());
-     double Xn= Double.parseDouble(inBatasbawah.getText());
-     double tlrn= Double.parseDouble(inError.getText());
-     //Aitken a=new Aitken(fx,n,Xn,tlrn);
-     DefaultTableModel model=(DefaultTableModel) tProses.getModel();
-     model.addRow(new Object[]{inFx.getText(),inIterasi.getText(),inBatasbawah.getText(),inError.getText()
-     });
-     //String b=String.valueOf(a.Output());
-     //hAkhir.setText(b);
-    }//GEN-LAST:event_bCariActionPerformed
-
-    private void bSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSimpanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bSimpanActionPerformed
 
     private void inFxRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inFxRFActionPerformed
         // TODO add your handling code here:
@@ -1337,6 +1347,42 @@ public class gui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inX2MullerActionPerformed
 
+    private void inFxIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inFxIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inFxIterasiActionPerformed
+
+    private void inGxIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inGxIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inGxIterasiActionPerformed
+
+    private void inIterasiIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inIterasiIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inIterasiIterasiActionPerformed
+
+    private void inErrorIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inErrorIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inErrorIterasiActionPerformed
+
+    private void inBatasatasIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasatasIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inBatasatasIterasiActionPerformed
+
+    private void inBatasbawahIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasbawahIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inBatasbawahIterasiActionPerformed
+
+    private void btnSimpanIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSimpanIterasiActionPerformed
+
+    private void btnCariIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariIterasiActionPerformed
+
+    }//GEN-LAST:event_btnCariIterasiActionPerformed
+
+    private void btnClearIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearIterasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClearIterasiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1349,17 +1395,19 @@ public class gui extends javax.swing.JFrame {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    try {
+                        javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    } catch (IllegalAccessException ex) {
+                        Logger.getLogger(gui.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (UnsupportedLookAndFeelException ex) {
+                        Logger.getLogger(gui.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(gui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -1373,35 +1421,37 @@ public class gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bCari;
-    private javax.swing.JButton bClear;
-    private javax.swing.JButton bSimpan;
+    private javax.swing.JButton btnCariIterasi;
     private javax.swing.JButton btnCariMuller;
     private javax.swing.JButton btnCariRF;
+    private javax.swing.JButton btnClearIterasi;
     private javax.swing.JButton btnClearMuller;
     private javax.swing.JButton btnClearRF;
+    private javax.swing.JButton btnSimpanIterasi;
     private javax.swing.JButton btnSimpanMuller;
     private javax.swing.JButton btnSimpanRF;
-    private javax.swing.JTextPane hAkhir;
+    private javax.swing.JTextPane hAkhirIterasi;
     private javax.swing.JTextPane hAkhirMuller;
     private javax.swing.JTextPane hAkhirRF;
+    private javax.swing.JTextField inBatasatasIterasi;
     private javax.swing.JTextField inBatasatasRF;
-    private javax.swing.JTextField inBatasbawah;
+    private javax.swing.JTextField inBatasbawahIterasi;
     private javax.swing.JTextField inBatasbawahRF;
-    private javax.swing.JTextField inError;
+    private javax.swing.JTextField inErrorIterasi;
     private javax.swing.JTextField inErrorMuller;
     private javax.swing.JTextField inErrorRF;
-    private javax.swing.JTextField inFx;
+    private javax.swing.JTextField inFxIterasi;
     private javax.swing.JTextField inFxMuller;
     private javax.swing.JTextField inFxRF;
-    private javax.swing.JTextField inIterasi;
+    private javax.swing.JTextField inGxIterasi;
+    private javax.swing.JTextField inIterasiIterasi;
     private javax.swing.JTextField inIterasiMuller;
     private javax.swing.JTextField inIterasiRF;
     private javax.swing.JTextField inX0Muller;
     private javax.swing.JTextField inX1Muller;
     private javax.swing.JTextField inX2Muller;
-    private javax.swing.JPanel input;
     private javax.swing.JPanel input1;
+    private javax.swing.JPanel inputIterasi;
     private javax.swing.JPanel inputMuller;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1414,13 +1464,16 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1432,24 +1485,23 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JScrollBar jScrollBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JLabel label1;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel label2;
     private javax.swing.JLabel label3;
-    private javax.swing.JPanel output;
+    private javax.swing.JLabel label4;
     private javax.swing.JPanel output1;
     private javax.swing.JPanel output2;
+    private javax.swing.JPanel outputIterasi;
     private javax.swing.JScrollPane scrollpane;
     private javax.swing.JScrollPane scrollpane1;
-    private javax.swing.JTable tProses;
+    private javax.swing.JScrollPane scrollpane2;
+    private javax.swing.JTable tProsesIterasi;
     private javax.swing.JTable tProsesMuller;
     private javax.swing.JTable tProsesRF;
     private javax.swing.JPanel tabAitken;
