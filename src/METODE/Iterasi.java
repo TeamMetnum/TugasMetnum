@@ -6,8 +6,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
         
 public class Iterasi {
     StringBuilder iterasi_op = new StringBuilder(""); //output proses sebagai string
-    String fx,
-            finv;
+    public String fx,finv;
     double fa,  //fx batas atas
             fb, //fx batas bawah
             a,  //x batas atas
