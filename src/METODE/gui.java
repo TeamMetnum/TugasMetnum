@@ -2337,8 +2337,8 @@ public class gui extends javax.swing.JFrame {
                     }
             }
             
-      String outputMuller = String.valueOf(xhasil);
-     hAkhirMuller.setText(outputMuller);  
+      //String outputMuller = String.valueOf(xhasil);
+     //hAkhirMuller.setText(outputMuller);  
     }//GEN-LAST:event_btnCariRFActionPerformed
 
     private void btnSimpanRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanRFActionPerformed
@@ -2356,6 +2356,13 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(i);
                     }
                 }
+        inFxRF.setText("");
+        inIterasiRF.setText("");
+        inErrorRF.setText("");
+        inBatasatasRF.setText("");
+        inBatasbawahRF.setText("");
+        hAkhirRF.setText("");
+        
     }//GEN-LAST:event_btnClearRFActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -2369,6 +2376,13 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(i);
                     }
                 }
+        inFxMuller.setText("");
+        inIterasiMuller.setText("");
+        inErrorMuller.setText("");
+        inX0Muller.setText("");
+        inX1Muller.setText("");
+        inX2Muller.setText("");
+        hAkhirMuller.setText("");
     }//GEN-LAST:event_btnClearMullerActionPerformed
 
     private void btnCariMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariMullerActionPerformed
@@ -2533,6 +2547,13 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
+        inFxIterasi.setText("");
+        inGxIterasi.setText("");
+        inIterasiIterasi.setText("");
+        inErrorIterasi.setText("");
+        inBatasatasIterasi.setText("");
+        inBatasbawahIterasi.setText("");
+        hAkhirIterasi.setText("");
     }//GEN-LAST:event_btnClearIterasiActionPerformed
 
     private void pilIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pilIterasiActionPerformed
@@ -2564,6 +2585,12 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
+        inFxBiseksi.setText("");
+        inIterasiBiseksi.setText("");
+        inErrorBiseksi.setText("");
+        inBatasatasBiseksi.setText("");
+        inBatasbawahBiseksi.setText("");
+        hAkhirBiseksi.setText("");
         
     }//GEN-LAST:event_btnClearBiseksiActionPerformed
 
@@ -2616,6 +2643,11 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
+        inFxNR.setText("");
+        inIterasiNR.setText("");
+        inErrorNR.setText("");
+        inX0NR.setText("");
+        hAkhirNR.setText("");
     }//GEN-LAST:event_btnClearNRActionPerformed
 
     private void btnCariNRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariNRActionPerformed
@@ -2670,8 +2702,11 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
-        
-        
+        inFxAitken.setText("");
+        inIterasiAitken.setText("");
+        inErrorAitken.setText("");
+        inX0Aitken.setText("");
+        hAkhirAitken.setText("");
     }//GEN-LAST:event_btnClearAitkenActionPerformed
 
     private void btnCariAitkenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariAitkenActionPerformed
@@ -2728,6 +2763,12 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
+        inFxSecant.setText("");
+        inIterasiSecant.setText("");
+        inErrorSecant.setText("");
+        inBatasatasSecant.setText("");
+        inBatasbawahSecant.setText("");
+        hAkhirSecant.setText("");
     }//GEN-LAST:event_btnClearSecantActionPerformed
 
     private void btnCariSecantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariSecantActionPerformed
@@ -2974,7 +3015,7 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JTable tProsesIterasi;
     private javax.swing.JTable tProsesMuller;
     public static javax.swing.JTable tProsesNR;
-    private javax.swing.JTable tProsesRF;
+    public static javax.swing.JTable tProsesRF;
     public static javax.swing.JTable tProsesSecant;
     private javax.swing.JPanel tabAitken;
     private javax.swing.JPanel tabBiseksi;
