@@ -84,13 +84,13 @@ public class Biseksi {
         return biseksi_ops;
     }
     
-    public void hapusdata() {
+    /*public void hapusdata() {
         biseksi_ops = "";
         Fa = 0;        Fb = 0;        Fx = 0;        n = 0;
         a = 0;         b = 0;         hx = 0;         e = 0;
         fungsi = "";
         atengahb = false;
-    }
+    }*/
     
     public boolean antara_ab() {
         if( MathParsing(fungsi, a) * MathParsing(fungsi,b) <= 0) 
