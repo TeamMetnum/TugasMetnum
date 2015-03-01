@@ -2,6 +2,8 @@ package metode;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
+import static METODE.MathParsing.MathParsing;
+import javax.swing.table.DefaultTableModel;
 
 /*
 Metode Aitken :: 080989999@instan---------------------
@@ -22,7 +24,7 @@ public class Aitken {
         aitken_status = true;
         max_iterasi = n;
         
-        aitken_op.append("Xn\t\tF(Xn)\t\tXn-F(Xn)\n");
+        //aitken_op.append("Xn\t\tF(Xn)\t\tXn-F(Xn)\n");
         // Xn       F(Xn)       Xn-F(Xn)
         
         for( int i=0; i<n; i++) {
@@ -36,9 +38,15 @@ public class Aitken {
             
             Xn = MathParsing(f,Xn);
             
-            aitken_op.append( nilaiXn[i] + "\t\t" + Xn + "\t\t" + selisihMutlak + "\n");
+            //aitken_op.append( nilaiXn[i] + "\t\t" + Xn + "\t\t" + selisihMutlak + "\n");
             // nilaiXn[i]       Xn         selisihmutlak
-            
+            DefaultTableModel model;
+            model = (DefaultTableModel) METODE.gui.tProsesAitken.getModel();
+                 model.addRow(new Object[]
+                        {
+                                nilaiXn[i], selisihMutlak
+                        });
+                 
             if (selisihMutlak <= tlrn){
                 Xn2 = nilaiXn[i]; 
                 aitken_status = false; 
@@ -66,29 +74,14 @@ public class Aitken {
     }
     
     // output prosesnya disini sebagai string
-    String proses_aitken() {
+    public String proses_aitken() {
         return aitken_ops;
     }
     
-    void hapusdata() {
-        aitken_ops = "";
-        Xn2 = 0;
-        aitken_status = false;
-        max_iterasi = 0;
-    }
-    
-    // bawaan sononya
-    double MathParsing(String func, double var) {
-        Expression e = new ExpressionBuilder(func)
-        .variables("x")
-        .build()
-        .setVariable("x", var);
-        return e.evaluate();
-    }
 }
 
 // nah ini test nyay > cek sini untuk liat caranya
-class AitkenTest {
+/*class AitkenTest {
     public static void main (String[]args) {
         Scanner input=new Scanner(System.in);
         System.out.print("Masukkan f(x): "); //1. User menginput f(x)
@@ -104,7 +97,7 @@ class AitkenTest {
         System.out.println(ai.proses_aitken());
         
     }
-}
+}*/
 
 /*
 
