@@ -13,6 +13,11 @@ import METODE.Iterasi;
 import METODE.Biseksi;
 import METODE.NewtonRhapson;
 import METODE.Aitken;
+import java.io.File;
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.TableModel;
 /**
  *
  * @author MuhammadAlham
@@ -25,7 +30,28 @@ public class gui extends javax.swing.JFrame {
     public gui() {
         initComponents();
     }
-    
+    private void exportToExcel(JTable table, File file) {  
+        try{  
+            TableModel tableModel = table.getModel();  
+            FileWriter fOut = new FileWriter(file);  
+              
+            for(int i = 0; i < tableModel.getColumnCount(); i++){  
+                fOut.write(tableModel.getColumnName(i)+"\t");  
+            }  
+              
+            fOut.write("\n");  
+              
+            for(int i = 0; i < tableModel.getRowCount(); i++){  
+                for(int j = 0; j < tableModel.getColumnCount(); j++){  
+                    fOut.write(tableModel.getValueAt(i, j).toString()+"\t");  
+                }  
+                fOut.write("\n");  
+            }  
+            fOut.close();  
+        } catch (Exception e){  
+            e.printStackTrace();  
+        }  
+    }  
             
 
     /**
@@ -235,6 +261,7 @@ public class gui extends javax.swing.JFrame {
         tabMetode.setBackground(new java.awt.Color(0, 0, 0));
         tabMetode.setForeground(new java.awt.Color(25, 71, 138));
         tabMetode.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        tabMetode.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         tabMetode.setFont(new java.awt.Font("Space Age", 0, 12)); // NOI18N
         tabMetode.setName("AITKEN"); // NOI18N
         tabMetode.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -438,6 +465,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanAitken.setFont(new java.awt.Font("Neuropolitical Rg", 0, 14)); // NOI18N
         btnSimpanAitken.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanAitken.setText("SIMPAN");
+        btnSimpanAitken.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         btnSimpanAitken.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanAitken.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -504,7 +532,7 @@ public class gui extends javax.swing.JFrame {
         label5.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         label5.setForeground(new java.awt.Color(25, 71, 138));
         label5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        label5.setText("F(x)");
+        label5.setText("f(x)");
         label5.setAlignmentX(0.5F);
         label5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -722,6 +750,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanBiseksi.setFont(new java.awt.Font("Neuropolitical Rg", 0, 12)); // NOI18N
         btnSimpanBiseksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanBiseksi.setText("SIMPAN");
+        btnSimpanBiseksi.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         btnSimpanBiseksi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanBiseksi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1039,6 +1068,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanIterasi.setFont(new java.awt.Font("Neuropolitical Rg", 0, 12)); // NOI18N
         btnSimpanIterasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanIterasi.setText("SIMPAN");
+        btnSimpanIterasi.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         btnSimpanIterasi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanIterasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1129,6 +1159,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanMuller.setFont(new java.awt.Font("Neuropolitical Rg", 0, 12)); // NOI18N
         btnSimpanMuller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanMuller.setText("SIMPAN");
+        btnSimpanMuller.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         btnSimpanMuller.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanMuller.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1224,7 +1255,7 @@ public class gui extends javax.swing.JFrame {
         label3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         label3.setForeground(new java.awt.Color(25, 71, 138));
         label3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        label3.setText("F(x)");
+        label3.setText("f(x)");
         label3.setAlignmentX(0.5F);
         label3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1600,6 +1631,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanNR.setFont(new java.awt.Font("Neuropolitical Rg", 0, 12)); // NOI18N
         btnSimpanNR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanNR.setText("SIMPAN");
+        btnSimpanNR.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         btnSimpanNR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanNR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1666,7 +1698,7 @@ public class gui extends javax.swing.JFrame {
         label2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         label2.setForeground(new java.awt.Color(25, 71, 138));
         label2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        label2.setText("F(x)");
+        label2.setText("f(x)");
         label2.setAlignmentX(0.5F);
         label2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1867,6 +1899,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanRF.setFont(new java.awt.Font("Neuropolitical Rg", 0, 12)); // NOI18N
         btnSimpanRF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanRF.setText("SIMPAN");
+        btnSimpanRF.setToolTipText("Data Tabel Akan di Export ke dalam bentuk Excel");
         btnSimpanRF.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanRF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2349,7 +2382,20 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCariRFActionPerformed
 
     private void btnSimpanRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanRFActionPerformed
-        // TODO add your handling code here:
+       DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesRF, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanRFActionPerformed
 
     private void inBatasatasRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasatasRFActionPerformed
@@ -2456,7 +2502,20 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCariMullerActionPerformed
 
     private void btnSimpanMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanMullerActionPerformed
-        // TODO add your handling code here:
+       DefaultTableModel model=(DefaultTableModel) tProsesMuller.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesMuller, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanMullerActionPerformed
 
     private void inFxMullerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inFxMullerActionPerformed
@@ -2508,7 +2567,20 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_inBatasbawahIterasiActionPerformed
 
     private void btnSimpanIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanIterasiActionPerformed
-        // TODO add your handling code here:
+       DefaultTableModel model=(DefaultTableModel) tProsesIterasi.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesIterasi, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanIterasiActionPerformed
 
     private void btnCariIterasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariIterasiActionPerformed
@@ -2625,7 +2697,20 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCariBiseksiActionPerformed
 
     private void btnSimpanBiseksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanBiseksiActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel) tProsesBiseksi.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesBiseksi, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanBiseksiActionPerformed
 
     private void inFxNRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inFxNRActionPerformed
@@ -2679,7 +2764,20 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCariNRActionPerformed
 
     private void btnSimpanNRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanNRActionPerformed
-        // TODO add your handling code here:
+       DefaultTableModel model=(DefaultTableModel) tProsesNR.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesNR, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanNRActionPerformed
 
     private void inGxNRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inGxNRActionPerformed
@@ -2740,7 +2838,21 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCariAitkenActionPerformed
 
     private void btnSimpanAitkenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanAitkenActionPerformed
-        // TODO add your handling code here:
+        
+        DefaultTableModel model=(DefaultTableModel) tProsesAitken.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesAitken, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanAitkenActionPerformed
 
     private void inBatasatasBiseksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasatasBiseksiActionPerformed
@@ -2806,7 +2918,20 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCariSecantActionPerformed
 
     private void btnSimpanSecantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanSecantActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel) tProsesSecant.getModel();
+        if(model.getRowCount()==0){
+            JOptionPane.showMessageDialog(rootPane, "Data Tabel Masih Kosong Sehingga Belum Dapat Melakukan Penyimpanan Data");
+        }
+        else{
+            String input=JOptionPane.showInputDialog("Tentukan Nama File");
+            if(!input.equals("")){
+                exportToExcel(tProsesSecant, new File(input+".xls"));
+                JOptionPane.showMessageDialog(rootPane, "Data telah disimpan ke directory Aplikasi ini");
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "Penyimpanan Data Dibatalkan, nama file harus ditentukan");
+            }   
+        }
     }//GEN-LAST:event_btnSimpanSecantActionPerformed
 
     private void inBatasatasSecantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasatasSecantActionPerformed
