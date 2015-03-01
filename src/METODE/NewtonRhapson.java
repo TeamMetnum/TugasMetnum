@@ -1,19 +1,20 @@
 
 package metode;
 import java.util.*;
+import static METODE.MathParsing.MathParsing;
+import javax.swing.table.DefaultTableModel;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
 
 
 public class NewtonRhapson {
-    
-    
+    double start, e, Fx, Gx, Hx;
+    double xn = 0;
+    /*
     public static void main (String args []) {
         Scanner insert = new Scanner (System.in);
         int iterasi; //menunjukan banyaknya pengulangan yang di inginkan
-        double start, e, Fx, Gx, Hx;
-        double xn = 0;
         System.out.println ("Masukan fungsi, f(x) = ");
         String fungsi1 = insert.nextLine();
         System.out.println ("Masukan turunan dari fungsi f(x), f'(x) = ");
@@ -24,32 +25,40 @@ public class NewtonRhapson {
         e = insert.nextDouble();
         System.out.println ("Masukan nilai awal pendekatan x0 : ");
         start = insert.nextDouble();
-
-        for (int i=0 ; i < iterasi ; i++) {
+    }*/
+      public NewtonRhapson(String fungsi1,String fungsi2,int iterasi,double e,double start){
+       
+          for (int i=0 ; i < iterasi ; i++) {
             Fx = MathParsing (fungsi1, start);
             Gx = MathParsing (fungsi2, start);
-            /*if (Fx/Gx==tak hingga) {
-                System.out.println ("turunan fungsi f(x) tidak terdefinisi di x ="+start);
+            try{
+                double test=Fx/Gx;
+            }
+            catch(ArithmeticException c){
+                METODE.gui.alertNR.setText("turunan fungsi f(x) tidak terdefinisi di x ="+start);
                 break;
-            }*/
+            }
+            
             xn = ((start*Gx)-Fx)/Gx;
+                
             Hx = MathParsing (fungsi1, xn);
+            DefaultTableModel model;
+            model = (DefaultTableModel) METODE.gui.tProsesNR.getModel();
+                 model.addRow(new Object[]
+                        {
+                                i+1, start, xn,Fx, Hx
+                        });
+                 
             if (Math.abs(Hx)<e) {
                 break;
             } else { 
                 start = xn;
             }
 
-        } System.out.println ("Solusi x : "+xn);
+        }
+            //System.out.println ("Solusi x : "+xn);
     }
-
-    public static double MathParsing (String func, double var) {
-        Expression e = new ExpressionBuilder (func)
-        .variables("x","e")
-        .build()
-        .setVariable ("x",var)
-        .setVariable ("e", Math.E);
-
-        return e.evaluate();
-    }
+      public String hasil_NR() {
+            return String.valueOf(xn);
+            }
 }
