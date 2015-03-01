@@ -2,6 +2,8 @@ package metode;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import java.util.*;
+import javax.swing.table.DefaultTableModel;
+import static METODE.MathParsing.MathParsing;
 
 public class RegFals {
     public static void main(String[] args) {
@@ -48,13 +50,5 @@ public class RegFals {
         }
         System.out.println("Solusi x: "+x);
     }
-   public static double MathParsing(String func, double var){
-        Expression a = new ExpressionBuilder(func)
-        .variables("x","pi", "e")
-        .build()
-        .setVariable("x", var)
-        .setVariable("pi", Math.PI)
-        .setVariable("e", Math.E);
-        return a.evaluate();
-    }
+   
 }
