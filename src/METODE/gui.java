@@ -25,6 +25,8 @@ public class gui extends javax.swing.JFrame {
     public gui() {
         initComponents();
     }
+    
+            
 
     /**
      * This method is called from within the constructor to initialize the form.
