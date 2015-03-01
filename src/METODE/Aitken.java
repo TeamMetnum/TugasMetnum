@@ -44,7 +44,7 @@ public class Aitken {
             model = (DefaultTableModel) METODE.gui.tProsesAitken.getModel();
                  model.addRow(new Object[]
                         {
-                                nilaiXn[i], selisihMutlak
+                                nilaiXn[i],Xn, selisihMutlak
                         });
                  
             if (selisihMutlak <= tlrn){
@@ -76,6 +76,10 @@ public class Aitken {
     // output prosesnya disini sebagai string
     public String proses_aitken() {
         return aitken_ops;
+        
+    }
+    public String solusi_aitken() {
+        return String.valueOf(Xn2);
     }
     
 }
