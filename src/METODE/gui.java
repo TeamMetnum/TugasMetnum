@@ -223,8 +223,10 @@ public class gui extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("METODE APROKSIMASI");
         setBackground(new java.awt.Color(255, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setPreferredSize(new java.awt.Dimension(2000, 440));
 
         tabMetode.setBackground(new java.awt.Color(0, 0, 0));
@@ -239,6 +241,7 @@ public class gui extends javax.swing.JFrame {
         });
 
         tabAitken.setBackground(new java.awt.Color(153, 153, 153));
+        tabAitken.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tabAitken.setFont(new java.awt.Font("Megalomania", 0, 11)); // NOI18N
 
         inputAitken.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
@@ -410,6 +413,7 @@ public class gui extends javax.swing.JFrame {
         btnClearAitken.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         btnClearAitken.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/waste.png"))); // NOI18N
         btnClearAitken.setText("CLEAR");
+        btnClearAitken.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnClearAitken.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearAitkenActionPerformed(evt);
@@ -420,6 +424,7 @@ public class gui extends javax.swing.JFrame {
         btnCariAitken.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         btnCariAitken.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/calculator.png"))); // NOI18N
         btnCariAitken.setText("CARI");
+        btnCariAitken.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCariAitken.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCariAitkenActionPerformed(evt);
@@ -430,6 +435,7 @@ public class gui extends javax.swing.JFrame {
         btnSimpanAitken.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         btnSimpanAitken.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/save.png"))); // NOI18N
         btnSimpanAitken.setText("SIMPAN");
+        btnSimpanAitken.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSimpanAitken.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanAitkenActionPerformed(evt);
@@ -2165,7 +2171,7 @@ public class gui extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(35, 141, 205));
 
-        jLabel1.setFont(new java.awt.Font("Space Age", 1, 30)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("D3 PipismW", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ribbon.png"))); // NOI18N
@@ -2225,10 +2231,11 @@ public class gui extends javax.swing.JFrame {
 
         jMenuBar1.setBackground(new java.awt.Color(25, 71, 138));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(25, 71, 138)));
+        jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuBar1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
         jMenu1.setText("Program");
-        jMenu1.setFont(new java.awt.Font("Calibri", 0, 15)); // NOI18N
+        jMenu1.setFont(new java.awt.Font("Maximal Beasts", 0, 16)); // NOI18N
 
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/home16.png"))); // NOI18N
         jMenuItem3.setText("Beranda");
@@ -2248,7 +2255,7 @@ public class gui extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Bantuan");
-        jMenu2.setFont(new java.awt.Font("Calibri", 0, 15)); // NOI18N
+        jMenu2.setFont(new java.awt.Font("Maximal Beasts", 0, 16)); // NOI18N
 
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon/info.png"))); // NOI18N
         jMenuItem2.setText("Tentang");
