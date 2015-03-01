@@ -3,7 +3,9 @@ package METODE;
 import java.util.*;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
-        
+import javax.swing.table.DefaultTableModel;
+import static METODE.MathParsing.MathParsing;
+
 public class Iterasi {
     StringBuilder iterasi_op = new StringBuilder(""); //output proses sebagai string
     public String fx,finv;
@@ -14,7 +16,8 @@ public class Iterasi {
             EP, //hasil akhir iterasi 
                 //-->> lebih baik gunakan yang string (hasil_iterasi()) 
                 //karena hasilnya kadang tidak bisa didapatkan dalam angka
-            e;  //error
+            e,  //error
+            hasilx;
     int maks; //jumlah iterasi maksimum
     
     // dipakai di gui
@@ -27,14 +30,13 @@ public class Iterasi {
         e = error_input;
         maks = maks_input;
         
-        fa = hasil(fx,a);
-        fb = hasil(fx,b);
+        fa = MathParsing(fx,a);
+        fb = MathParsing(fx,b);
+        
     }
     
-    // dipakai di gui
-    public String hasil_iterasi(int pilih_input) { 
-        //pilihannya dibuat terserah mau pakai (batas atas == 1) atau (batas bawah = 2)
-        String hasil_sementara = "";
+        public Iterasi(int pilih_input) {
+        double hasil_sementara=0;
         if (tes(fa,fb) == true){
             int pilih = pilih_input;
             switch (pilih){
@@ -42,22 +44,35 @@ public class Iterasi {
                     //iterasi_op.append("no\t\tx\t\tfinv(x)\n");
                     // no(k)    x   finv(x)
                     EP = cari_iterasi (finv,a,maks,0,e);
-                    //hasil_sementara += "nilai akar x anda adalah dengan batas yang dipakai " + a + " : " + EP;
+                    hasil_sementara =  EP;
                     break;
                 case 2 :
                     //iterasi_op.append("no\t\tx\t\tfinv(x)\n");
                     // no(k)    x   finv(x)
                     EP = cari_iterasi (finv,b,maks,0,e);
-                    //hasil_sementara += "nilai akar x anda adalah dengan batas yang dipakai " + b + " : " + EP;
+                    hasil_sementara = EP;
                     break;
             }
-        } else {
-            //hasil_sementara += "maaf batas anda tidak dapat digunakan sebagai dasar iterasi\n";
-            //if (tes2(fa,fb) == true)
-                //hasil_sementara += " karena salah satu di antara angka anda tersebut adalah akar persamaan";
+        } 
+            else {
+            gui.alertIterasi.setText( "Maaf batas anda tidak dapat digunakan sebagai dasar iterasi");
+            if (tes2(fa,fb) == true)
+                gui.alertIterasi.setText("Salah satu di antara angka anda tersebut adalah akar persamaan");
         }
-        return hasil_sementara;
+         hasilx = hasil_sementara;
+        
     }
+        
+    public String hasil_Iterasi() {
+        return String.valueOf(hasilx);
+    }
+    
+    // dipakai di gui
+    //public double hasil_iterasi(int pilih_input) { 
+        //pilihannya dibuat terserah mau pakai (batas atas == 1) atau (batas bawah = 2)
+        
+    //}
+    
     
     // dipakai di gui
     public String proses_iterasi() {
@@ -82,9 +97,14 @@ public class Iterasi {
     public double cari_iterasi(String inv, double batas, int ulang, int k, double galat) {
         k++;
         double hasilakhir = 0;
-        double nilai = hasil (inv,batas);
-        iterasi_op.append(k + "\t\t" + batas + "\t\t" + nilai + "\n");
-        
+        double nilai = MathParsing (inv,batas);
+        //iterasi_op.append(k + "\t\t" + batas + "\t\t" + nilai + "\n");
+        DefaultTableModel model;
+            model = (DefaultTableModel) METODE.gui.tProsesBiseksi.getModel();
+                 model.addRow(new Object[]
+                        {
+                                k, batas, nilai
+                        });
         if ( k == ulang || Math.abs(batas-nilai) <= galat) 
             hasilakhir = nilai;
         else {
@@ -93,15 +113,8 @@ public class Iterasi {
         
         return hasilakhir;
     }
+    
       
-    public double hasil(String func, double var) { // <-- ini adalah MathParsingnya
-        Expression e = new ExpressionBuilder(func)
-        .variables("x")
-        .build()
-        .setVariable("x", var);
-        return e.evaluate();
-    }
-   
     public boolean tes(double atas, double bawah) {
         return atas*bawah < 0;
     }
@@ -109,10 +122,11 @@ public class Iterasi {
     public boolean tes2(double up, double down) {
         return up*down == 0;
     }   
+    
 }
 
-class IterasiTest {
-    /*public static void main(String[] args) {
+/*class IterasiTest {
+    public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         double fa,fb,a,b,EP,e=0;
         int maks;
@@ -141,8 +155,8 @@ class IterasiTest {
         System.out.println(iter.proses_iterasi());
         
         //iter.hapusdata();
-    }*/
-}
+    }
+}*/
 
 
 /*

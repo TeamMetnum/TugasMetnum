@@ -102,6 +102,7 @@ public class gui extends javax.swing.JFrame {
         inBatasbawahIterasi = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
         pilIterasi = new javax.swing.JComboBox();
+        alertIterasi = new javax.swing.JLabel();
         outputIterasi = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tProsesIterasi = new javax.swing.JTable();
@@ -870,6 +871,8 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        alertIterasi.setForeground(new java.awt.Color(255, 0, 0));
+
         javax.swing.GroupLayout inputIterasiLayout = new javax.swing.GroupLayout(inputIterasi);
         inputIterasi.setLayout(inputIterasiLayout);
         inputIterasiLayout.setHorizontalGroup(
@@ -877,29 +880,34 @@ public class gui extends javax.swing.JFrame {
             .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(inputIterasiLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, inputIterasiLayout.createSequentialGroup()
-                        .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                            .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inFxIterasi)
-                    .addComponent(inGxIterasi)
+                    .addComponent(alertIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(inputIterasiLayout.createSequentialGroup()
-                        .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(pilIterasi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(inBatasatasIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
-                            .addComponent(inErrorIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
-                            .addComponent(inIterasiIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
-                            .addComponent(inBatasbawahIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, inputIterasiLayout.createSequentialGroup()
+                                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                                    .addComponent(label4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(inFxIterasi)
+                            .addComponent(inGxIterasi)
+                            .addGroup(inputIterasiLayout.createSequentialGroup()
+                                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(inBatasatasIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                                    .addComponent(inErrorIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                                    .addComponent(inIterasiIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                                    .addComponent(inBatasbawahIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inputIterasiLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(pilIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         inputIterasiLayout.setVerticalGroup(
@@ -931,15 +939,14 @@ public class gui extends javax.swing.JFrame {
                         .addComponent(inBatasatasIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(inBatasbawahIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)))
-                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(inputIterasiLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(pilIterasi, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
-                    .addGroup(inputIterasiLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(inputIterasiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(pilIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(alertIterasi, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         inputIterasiLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inBatasatasIterasi, inBatasbawahIterasi, inErrorIterasi, inFxIterasi, inGxIterasi, inIterasiIterasi});
@@ -2520,21 +2527,23 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
+        alertIterasi.setText("");
      
         
         METODE.Iterasi iter = new Iterasi(fx, gx, a, b, tlrn, n);
-       
         
-        //if(pilIterasi.getSelectedItem().equals("Batas Atas=1")){
-            iter.hasil_iterasi(1);
-            iter.proses_iterasi();
-            /*model.addRow(new Object[]
-                        {
-                                Iterasi.i+1,a,b
-                        });*/
-                String outputIterasi = String.valueOf(iter.hasil_iterasi(1));
-                hAkhirIterasi.setText(outputIterasi); 
-        //}
+       
+        if(pilIterasi.getSelectedItem().equals("Batas Atas=1")){
+            METODE.Iterasi pil = new Iterasi(1);
+            pil.proses_iterasi();
+                hAkhirIterasi.setText(iter.hasil_Iterasi());
+        }
+        else{
+            METODE.Iterasi pil = new Iterasi(2);
+            pil.proses_iterasi();
+                hAkhirIterasi.setText(iter.hasil_Iterasi());
+        
+        }
         
     }//GEN-LAST:event_btnCariIterasiActionPerformed
 
@@ -2547,6 +2556,7 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
+        alertIterasi.setText("");
         inFxIterasi.setText("");
         inGxIterasi.setText("");
         inIterasiIterasi.setText("");
@@ -2841,6 +2851,7 @@ public class gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel alertIterasi;
     public static javax.swing.JLabel alertNR;
     private javax.swing.JButton btnCariAitken;
     private javax.swing.JButton btnCariBiseksi;
