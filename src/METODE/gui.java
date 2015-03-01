@@ -1915,6 +1915,8 @@ public class gui extends javax.swing.JFrame {
 
         tabMetode.addTab("REGULAR FALSI", new javax.swing.ImageIcon(getClass().getResource("/image/icon/gears.png")), tabRF); // NOI18N
 
+        tabSecant.setBackground(new java.awt.Color(153, 153, 153));
+
         outputSecant.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "OUTPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
         tProsesSecant.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -2242,7 +2244,7 @@ public class gui extends javax.swing.JFrame {
                 .addComponent(tabMetode))
         );
 
-        tabMetode.getAccessibleContext().setAccessibleName("AITKEN");
+        tabMetode.getAccessibleContext().setAccessibleName("");
 
         jMenuBar1.setBackground(new java.awt.Color(25, 71, 138));
         jMenuBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(25, 71, 138)));
@@ -3096,7 +3098,7 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JPanel tabAitken;
     private javax.swing.JPanel tabBiseksi;
     private javax.swing.JPanel tabIterasi;
-    private javax.swing.JTabbedPane tabMetode;
+    public javax.swing.JTabbedPane tabMetode;
     private javax.swing.JPanel tabMuller;
     private javax.swing.JPanel tabNR;
     private javax.swing.JPanel tabRF;
