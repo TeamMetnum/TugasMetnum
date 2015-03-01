@@ -2398,7 +2398,7 @@ public class gui extends javax.swing.JFrame {
             }
         
         METODE.Aitken AI = new Aitken(fx ,n, a, tlrn);
-        hAkhirAitken.setText(AI.proses_aitken());
+        hAkhirAitken.setText(AI.solusi_aitken());
         
     }//GEN-LAST:event_btnCariAitkenActionPerformed
 
