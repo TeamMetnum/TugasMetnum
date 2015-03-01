@@ -199,10 +199,6 @@ public class gui extends javax.swing.JFrame {
         inIterasiRF = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         inErrorRF = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        inBatasbawahRF = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        inBatasatasRF = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         output1 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -1733,30 +1729,6 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(25, 71, 138));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setText("Batas Bawah (a)");
-
-        inBatasbawahRF.setToolTipText("");
-        inBatasbawahRF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inBatasbawahRFActionPerformed(evt);
-            }
-        });
-
-        jLabel12.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(25, 71, 138));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel12.setText("Batas Atas (b)");
-
-        inBatasatasRF.setToolTipText("");
-        inBatasatasRF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inBatasatasRFActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout input1Layout = new javax.swing.GroupLayout(input1);
         input1.setLayout(input1Layout);
         input1Layout.setHorizontalGroup(
@@ -1765,8 +1737,6 @@ public class gui extends javax.swing.JFrame {
             .addGroup(input1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
                     .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1774,14 +1744,9 @@ public class gui extends javax.swing.JFrame {
                 .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(inFxRF)
                     .addComponent(inIterasiRF)
-                    .addComponent(inErrorRF, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inBatasbawahRF, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inBatasatasRF, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inErrorRF, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-
-        input1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {inBatasatasRF, inBatasbawahRF});
-
         input1Layout.setVerticalGroup(
             input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(input1Layout.createSequentialGroup()
@@ -1797,19 +1762,11 @@ public class gui extends javax.swing.JFrame {
                 .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(inErrorRF, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(inBatasbawahRF, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(input1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(inBatasatasRF, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        input1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inBatasatasRF, inBatasbawahRF, inErrorRF, inFxRF, inIterasiRF});
+        input1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {inErrorRF, inFxRF, inIterasiRF});
 
         output1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "OUTPUT", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
@@ -2356,16 +2313,10 @@ public class gui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inErrorRFActionPerformed
 
-    private void inBatasbawahRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasbawahRFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inBatasbawahRFActionPerformed
-
     private void btnCariRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariRFActionPerformed
 
      String fx=inFxRF.getText();
      int n= Integer.parseInt(inIterasiRF.getText());
-     double a= Double.parseDouble(inBatasbawahRF.getText());
-     double b= Double.parseDouble(inBatasatasRF.getText());
      double tlrn= Double.parseDouble(inErrorRF.getText());
      
         DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
@@ -2376,9 +2327,8 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(i);
                     }
             }
-            
-      //String outputMuller = String.valueOf(xhasil);
-     //hAkhirMuller.setText(outputMuller);  
+            METODE.RegFals RegF = new RegFals(fx,tlrn, n);
+        hAkhirRF.setText(RegF.hasil_RF());
     }//GEN-LAST:event_btnCariRFActionPerformed
 
     private void btnSimpanRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanRFActionPerformed
@@ -2398,10 +2348,6 @@ public class gui extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSimpanRFActionPerformed
 
-    private void inBatasatasRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inBatasatasRFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inBatasatasRFActionPerformed
-
     private void btnClearRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearRFActionPerformed
         DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
         while(model.getRowCount()>0){
@@ -2412,8 +2358,6 @@ public class gui extends javax.swing.JFrame {
         inFxRF.setText("");
         inIterasiRF.setText("");
         inErrorRF.setText("");
-        inBatasatasRF.setText("");
-        inBatasbawahRF.setText("");
         hAkhirRF.setText("");
         
     }//GEN-LAST:event_btnClearRFActionPerformed
@@ -3008,11 +2952,9 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JTextPane hAkhirSecant;
     private javax.swing.JTextField inBatasatasBiseksi;
     private javax.swing.JTextField inBatasatasIterasi;
-    private javax.swing.JTextField inBatasatasRF;
     private javax.swing.JTextField inBatasatasSecant;
     private javax.swing.JTextField inBatasbawahBiseksi;
     private javax.swing.JTextField inBatasbawahIterasi;
-    private javax.swing.JTextField inBatasbawahRF;
     private javax.swing.JTextField inBatasbawahSecant;
     private javax.swing.JTextField inErrorAitken;
     private javax.swing.JTextField inErrorBiseksi;
@@ -3052,7 +2994,6 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -3100,7 +3041,6 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
