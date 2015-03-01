@@ -2321,18 +2321,13 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_inBatasbawahRFActionPerformed
 
     private void btnCariRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariRFActionPerformed
-        double Fa,Fb,Fx,x = 0;
+
      String fx=inFxRF.getText();
      int n= Integer.parseInt(inIterasiRF.getText());
      double a= Double.parseDouble(inBatasbawahRF.getText());
      double b= Double.parseDouble(inBatasatasRF.getText());
      double tlrn= Double.parseDouble(inErrorRF.getText());
-     while(true){
-     if(MathParsing(fx,a)*MathParsing(fx,b)<=0) break; //6. Jika Fa*Fb<=0 berarti a<=solusi<=b
-            //if(MathParsing(fx,a)*MathParsing(fx,b)>0) System.out.println("Pilih interval a<solusi<b");
-     }
-     Fa=MathParsing(fx,a);
-     Fb=MathParsing(fx,b);
+     
         DefaultTableModel model=(DefaultTableModel) tProsesRF.getModel();
             while(model.getRowCount()>0)
             {
@@ -2341,30 +2336,9 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(i);
                     }
             }
-                for(int i=0;i<n;i++)
-                {
-                    x=(a*Fb-b*Fa)/(Fb-Fa);
-                    Fx=MathParsing(fx,x);
-                                
-                        model.addRow(new Object[]
-                        {
-                                i+1,a,b,x,Fa,Fb,Fx
-                        });
             
-            if(Math.abs(Fx)<tlrn) break;
-            if(Fx*Fa<0)
-            {
-                b=x;
-                Fb=Fx;
-            } 
-            else
-            {
-                a=x;
-                Fa=Fx;
-            }
-        }
-     String outputRF = String.valueOf(x);
-     hAkhirRF.setText(outputRF);
+      String outputMuller = String.valueOf(xhasil);
+     hAkhirMuller.setText(outputMuller);  
     }//GEN-LAST:event_btnCariRFActionPerformed
 
     private void btnSimpanRFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanRFActionPerformed
