@@ -3096,7 +3096,7 @@ public class gui extends javax.swing.JFrame {
     public static javax.swing.JTable tProsesRF;
     public static javax.swing.JTable tProsesSecant;
     private javax.swing.JPanel tabAitken;
-    private javax.swing.JPanel tabBiseksi;
+    public javax.swing.JPanel tabBiseksi;
     private javax.swing.JPanel tabIterasi;
     public javax.swing.JTabbedPane tabMetode;
     private javax.swing.JPanel tabMuller;
