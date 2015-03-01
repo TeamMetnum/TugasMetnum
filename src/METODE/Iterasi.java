@@ -1,4 +1,4 @@
-package metode;
+package METODE;
 
 import java.util.*;
 import net.objecthunter.exp4j.Expression;

@@ -9,13 +9,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
-import metode.Aitken;
-import metode.Biseksi;
-import metode.Iterasi;
-import metode.Muller;
-import metode.NewtonRhapson;
-import metode.RegFals;
-import metode.Secant;
+import METODE.Iterasi;
+import METODE.Biseksi;
+import METODE.NewtonRhapson;
+import METODE.Aitken;
 /**
  *
  * @author MuhammadAlham
@@ -2236,7 +2233,7 @@ public class gui extends javax.swing.JFrame {
             }
      
         
-        metode.Iterasi iter = new Iterasi(fx, gx, a, b, tlrn, n);
+        METODE.Iterasi iter = new Iterasi(fx, gx, a, b, tlrn, n);
        
         
         //if(pilIterasi.getSelectedItem().equals("Batas Atas=1")){
@@ -2304,7 +2301,7 @@ public class gui extends javax.swing.JFrame {
                     }
             }
      
-        metode.Biseksi bis = new Biseksi(fx, tlrn, n, a, b);
+        METODE.Biseksi bis = new Biseksi(fx, tlrn, n, a, b);
         hAkhirBiseksi.setText(bis.hasil_biseksi());
     }//GEN-LAST:event_btnCariBiseksiActionPerformed
 
@@ -2353,7 +2350,7 @@ public class gui extends javax.swing.JFrame {
                         model.removeRow(j);
                     }
             }
-        metode.NewtonRhapson NR = new NewtonRhapson(fx, gx, n, tlrn, a);
+        METODE.NewtonRhapson NR = new NewtonRhapson(fx, gx, n, tlrn, a);
         hAkhirNR.setText(NR.hasil_NR());
     }//GEN-LAST:event_btnCariNRActionPerformed
 
@@ -2400,7 +2397,7 @@ public class gui extends javax.swing.JFrame {
                     }
             }
         
-        metode.Aitken AI = new Aitken(fx ,n, a, tlrn);
+        METODE.Aitken AI = new Aitken(fx ,n, a, tlrn);
         hAkhirAitken.setText(AI.proses_aitken());
         
     }//GEN-LAST:event_btnCariAitkenActionPerformed

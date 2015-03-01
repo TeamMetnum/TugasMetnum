@@ -1,5 +1,5 @@
 
-package metode;
+package METODE;
 import java.util.*;
 import static METODE.MathParsing.MathParsing;
 import javax.swing.table.DefaultTableModel;
