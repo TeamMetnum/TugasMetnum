@@ -79,7 +79,7 @@ public class Aitken {
         
     }
     public String solusi_aitken() {
-        return String.valueOf(Xn2);
+        return String.valueOf(hasil_aitken());
     }
     
 }
